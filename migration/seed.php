@@ -18,14 +18,14 @@ if ($mysqli->connect_errno) {
 }
 echo $mysqli->host_info . "\n";
 
-//require dirname(dirname(__FILE__))."/config/db-param.php";
-//
-//print_r($database_server);
-//
-//$db_host       = @$database_server['matser']['db_host'];
-//$db_user       = @$database_server['matser']['db_user'];
-//$db_password   = @$database_server['matser']['db_password'];
-//
+require dirname(dirname(__FILE__))."/config/db-param.php";
+
+$db_host       = @$database_server['matser']['db_host'];
+$db_user       = @$database_server['matser']['db_user'];
+$db_password   = @$database_server['matser']['db_password'];
+
+echo $db_host;
+
 //$con = mysqli_connect($db_host, $db_user, $db_password);
 //
 //// Check connection
