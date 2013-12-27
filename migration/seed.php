@@ -18,7 +18,7 @@ $db_host       = @$database_server['matser']['db_host'];
 $db_user       = @$database_server['matser']['db_user'];
 $db_password   = @$database_server['matser']['db_password'];
 
-$con = mysqli_connect($db_host, $db_user, $db_password);
+$con = new mysqli($db_host, $db_user, $db_password, "fukuphp", 3306);
 
 // Check connection
 if (mysqli_connect_errno()) {
