@@ -1,41 +1,41 @@
 # Fuku RewriteRule
 
-#allow from all
-#
-#<FilesMatch "\.(ico|pdf|flv|jpg|JPG|jpeg|png|PNG|gif|js|css|swf)(\.gz)?$">
-#   <ifModule mod_headers.c>
-#      Header set Expires "Thu, 1 Apr 2014 20:00:00 GMT"
-#      Header unset ETag
-#   </IfModule>
-#   FileETag None
-#</FilesMatch>
-#
-## 1 year cache
-#<filesMatch "\.(ico|pdf|flv)$">
-#   <ifModule mod_headers.c>
-#      Header set Cache-Control "max-age=29030400, public"
-#   </IfModule>
-#</filesMatch>
-## 1 week cache
-#<filesMatch "\.(jpg|JPG|jpeg|png|PNG|gif|swf)$">
-#   <ifModule mod_headers.c>
-#      Header set Cache-Control "max-age=604800, public"
-#   </IfModule>
-#</filesMatch>
-## 2 days cache
-#<filesMatch "\.(xml|txt|css|js)$">
-#   <ifModule mod_headers.c>
-#      Header set Cache-Control "max-age=172800, proxy-revalidate"
-#   </IfModule>
-#</filesMatch>
-#
-#<FilesMatch "\.(engine|inc|info|install|make|module|profile|test|po|sh|.*sql|theme|bak|.#*sql~|bak~|php~|tpl(\.php)?|xtmpl)$|^(\..*|Entries.*|Repository|Root|Tag|Template)$">
-#   Order allow,deny
-#</FilesMatch>
-#
-#<Files ~ "^\.(htaccess|htpasswd)$">
-#   deny from all
-#</Files>
+allow from all
+
+<FilesMatch "\.(ico|pdf|flv|jpg|JPG|jpeg|png|PNG|gif|js|css|swf)(\.gz)?$">
+   <ifModule mod_headers.c>
+      Header set Expires "Thu, 1 Apr 2014 20:00:00 GMT"
+      Header unset ETag
+   </IfModule>
+   FileETag None
+</FilesMatch>
+
+# 1 year cache
+<filesMatch "\.(ico|pdf|flv)$">
+   <ifModule mod_headers.c>
+      Header set Cache-Control "max-age=29030400, public"
+   </IfModule>
+</filesMatch>
+# 1 week cache
+<filesMatch "\.(jpg|JPG|jpeg|png|PNG|gif|swf)$">
+   <ifModule mod_headers.c>
+      Header set Cache-Control "max-age=604800, public"
+   </IfModule>
+</filesMatch>
+# 2 days cache
+<filesMatch "\.(xml|txt|css|js)$">
+   <ifModule mod_headers.c>
+      Header set Cache-Control "max-age=172800, proxy-revalidate"
+   </IfModule>
+</filesMatch>
+
+<FilesMatch "\.(engine|inc|info|install|make|module|profile|test|po|sh|.*sql|theme|bak|.*sql~|bak~|php~|tpl(\.php)?|xtmpl)$|^(\..*|Entries.*|Repository|Root|Tag|Template)$">
+   Order allow,deny
+</FilesMatch>
+
+<Files ~ "^\.(htaccess|htpasswd)$">
+   deny from all
+</Files>
 #
 #<IfModule mod_rewrite.c>
 #   Options +FollowSymlinks
