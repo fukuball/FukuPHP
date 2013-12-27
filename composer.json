@@ -1,0 +1,27 @@
+{
+    "name": "fukuball/fuku-php",
+    "description": "Another php web framework",
+    "require": {
+        "php": ">= 5.3",
+        "aws/aws-sdk-php": "2.*",
+        "kriswallsmith/assetic": "v1.1.2"
+    },
+    "require-dev": {
+        "aws/aws-sdk-php": "2.*",
+        "kriswallsmith/assetic": "v1.1.2",
+        "phpunit/phpunit": ">=3.7.0",
+        "satooshi/php-coveralls": "dev-master",
+        "squizlabs/php_codesniffer": "1.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fukuball Lin",
+            "email": "fukuball@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+
+    }
+}
