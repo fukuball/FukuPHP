@@ -27,6 +27,8 @@ before_script:
 script:
   - vendor/bin/phpunit --configuration phpunit.xml --colors --coverage-text --coverage-clover build/log/clover.xml
   - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php --ignore=*/test/* ./class
+  - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php --ignore=*/test/* ./config
+  - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php --ignore=*/test/* ./migration
   - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php --ignore=*/test/* ./view-controller
   - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php --ignore=*/test/* ./index.php
 
