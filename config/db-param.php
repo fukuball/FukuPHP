@@ -14,19 +14,19 @@
 
 $database_server = array(
    "master"=>array(
-      "db_host"=>'iv-db-r-m-1.cge5maornwe7.ap-northeast-1.rds.amazonaws.com',
+      "db_host"=>'fukuball-db1.cm4k6347dhx2.us-west-2.rds.amazonaws.com',
       "db_name"=>'fukuphp',
       "db_user"=>'fukuphp',
       "db_password"=>'pass2fuku'
    ),
    "slave1"=>array(
-      "db_host"=>'iv-db-r-m-1.cge5maornwe7.ap-northeast-1.rds.amazonaws.com',
+      "db_host"=>'fukuball-db1.cm4k6347dhx2.us-west-2.rds.amazonaws.com',
       "db_name"=>'fukuphp',
       "db_user"=>'fukuphp',
       "db_password"=>'pass2fuku'
    ),
    "slave2"=>array(
-      "db_host"=>'iv-db-r-m-1.cge5maornwe7.ap-northeast-1.rds.amazonaws.com',
+      "db_host"=>'fukuball-db1.cm4k6347dhx2.us-west-2.rds.amazonaws.com',
       "db_name"=>'fukuphp',
       "db_user"=>'fukuphp',
       "db_password"=>'pass2fuku',
