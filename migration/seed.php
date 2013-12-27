@@ -12,12 +12,6 @@
  * @link     http://www.fukuball.com
  */
 
-$mysqli = new mysqli("fukuball-db1.cm4k6347dhx2.us-west-2.rds.amazonaws.com", "fukuphp", "pass2fuku", "fukuphp");
-if ($mysqli->connect_errno) {
-    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-}
-echo $mysqli->host_info . "\n";
-
 require dirname(dirname(__FILE__))."/config/db-param.php";
 
 $db_host       = $database_server['master']['db_host'];
