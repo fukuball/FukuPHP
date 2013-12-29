@@ -11,6 +11,5 @@
  * @version  GIT: <0.0.1>
  * @link     http://www.fukuball.com
  */
-
 ?>
 <?php echo $error_title; ?> - <?php echo $error_description; ?>

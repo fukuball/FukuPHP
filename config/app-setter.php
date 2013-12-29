@@ -12,10 +12,10 @@
  * @link     http://www.fukuball.com
  */
 
-//ini_set('display_errors', 1);
-//ini_set('log_errors', 1);
-//ini_set('error_log', dirname(__FILE__) . '/error.log');
-//error_reporting(E_ERROR | E_WARNING | E_PARSE);
+ini_set('display_errors', 1);
+ini_set('log_errors', 1);
+ini_set('error_log', dirname(__FILE__) . '/error.log');
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
 session_start();
 

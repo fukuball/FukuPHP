@@ -1,4 +1,17 @@
-
+<?php
+/**
+ * default-layout.php
+ *
+ * PHP version 5
+ *
+ * @category PHP
+ * @package  /view-layout/
+ * @author   Fukuball Lin <fukuball@gmail.com>
+ * @license  MIT Licence
+ * @version  GIT: <0.0.1>
+ * @link     http://www.fukuball.com
+ */
+?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
