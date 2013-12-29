@@ -216,8 +216,8 @@ class HomeViewController
    public static function indexAction($url_matches_param, $GET)
    {
 
-      print_r($url_matches_param);
-      print_r($GET);
+      $yield_path = '/view-page/index.php';
+      require_once SITE_ROOT.'/view-layout/default-layout.php';
 
    }// end function indexAction
 
