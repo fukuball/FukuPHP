@@ -68,25 +68,21 @@ class AppContainer extends FukuPHPRESTControl
 
       }
 
-      if ( !class_exists($controller_name) ) {
+      $controller_file_path 
+         = SITE_ROOT . '/view-controller/' . $controller_name . 'ViewController.php';
 
-         $controller_file_path 
-            = SITE_ROOT . '/view-controller/' . $controller_name . 'ViewController.php';
+      if ( file_exists($controller_file_path) ) { // load controler
 
-         if ( file_exists($controller_file_path) ) { // load controler
+         include_once $controller_file_path;
+         $controller_name = $controller_name.'ViewController';
 
-            include_once $controller_file_path;
-            $controller_name = $controller_name.'ViewController';
+      } else { // can't find controller
 
-         } else { // can't find controller
+         // find user path
 
-            // find user path
-
-            // or default controller
-            include_once DEFAULT_VIEW_CONTROLLER_PATH;
-            $controller_name = DEFAULT_VIEW_CONTROLLER;
-
-         }
+         // or default controller
+         include_once DEFAULT_VIEW_CONTROLLER_PATH;
+         $controller_name = DEFAULT_VIEW_CONTROLLER;
 
       }
 
