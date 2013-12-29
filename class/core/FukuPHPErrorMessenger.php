@@ -1,6 +1,6 @@
 <?php
 /**
- * IndievoxErrorMessenger.php is error messenger class
+ * FukuPHPErrorMessenger.php is error messenger class
  *
  * PHP version 5
  *
@@ -13,12 +13,12 @@
  */
 
 /**
- * IndievoxErrorMessenger is error messenger class
+ * FukuPHPErrorMessenger is error messenger class
  *
- * An example of a IndievoxErrorMessenger is:
+ * An example of a FukuPHPErrorMessenger is:
  *
  * <code>
- *   $error_messenger_obj = new IndievoxErrorMessenger();
+ *   $error_messenger_obj = new FukuPHPErrorMessenger();
  * </code>
  *
  * @category PHP
@@ -28,7 +28,7 @@
  * @version  Release: <0.0.1>
  * @link     http://www.fukuball.com
  */
-class IndievoxErrorMessenger
+class FukuPHPErrorMessenger
 {
 
    protected $version = "0.1";
@@ -291,5 +291,5 @@ class IndievoxErrorMessenger
 
    }// end function __destruct
 
-}// end class IndievoxErrorMessenger
+}// end class FukuPHPErrorMessenger
 ?>

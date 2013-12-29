@@ -26,5 +26,5 @@ define('DEFAULT_VIEW_CONTROLLER_PATH', SITE_ROOT.'/view-controller/HomeViewContr
 define('DEFAULT_VIEW_CONTROLLER', 'HomeViewController');
 
 // library
-require_once SITE_ROOT.'/class/indievox.inc';
+require_once SITE_ROOT.'/class/FukuPHP.inc';
 ?>

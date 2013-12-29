@@ -1,6 +1,6 @@
 <?php
 /**
- * IndievoxHelper.php is site helper class
+ * FukuPHPHelper.php is site helper class
  *
  * PHP version 5
  *
@@ -13,12 +13,12 @@
  */
 
 /**
- * IndievoxHelper is site helper class
+ * FukuPHPHelper is site helper class
  *
- * An example of a IndievoxHelper is:
+ * An example of a FukuPHPHelper is:
  *
  * <code>
- *   IndievoxHelper::function();
+ *   FukuPHPHelper::function();
  * </code>
  *
  * @category PHP
@@ -28,7 +28,7 @@
  * @version  Release: <0.0.1>
  * @link     http://www.fukuball.com
  */
-class IndievoxHelper
+class FukuPHPHelper
 {
 
    /**
@@ -202,5 +202,5 @@ class IndievoxHelper
 
    }// end function readfileChunked
 
-}// end class IndievoxHelper
+}// end class FukuPHPHelper
 ?>

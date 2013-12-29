@@ -1,6 +1,6 @@
 <?php
 /**
- * IndievoxRESTControl.php is the controller
+ * FukuPHPRESTControl.php is the controller
  * to dispatch all the rest action to it's controller
  *
  * PHP version 5
@@ -14,10 +14,10 @@
  */
 
 /**
- * IndievoxRESTControl is the controller
+ * FukuPHPRESTControl is the controller
  * to dispatch all the rest action to it's controller
  *
- * An example of a IndievoxRESTControl is:
+ * An example of a FukuPHPRESTControl is:
  *
  * <code>
  *  # This will done by rest request
@@ -30,7 +30,7 @@
  * @version  Release: <0.0.1>
  * @link     http://www.fukuball.com
  */
-class IndievoxRESTControl
+class FukuPHPRESTControl
 {
 
    /**
@@ -51,5 +51,5 @@ class IndievoxRESTControl
    }// end function exceptionResponse
 
 
-}// end class IndievoxRESTControl
+}// end class FukuPHPRESTControl
 ?>

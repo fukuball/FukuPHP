@@ -1,6 +1,6 @@
 <?php
 /**
- * IndievoxActiveRecord.php is model class
+ * FukuPHPActiveRecord.php is model class
  *
  * PHP version 5
  *
@@ -13,9 +13,9 @@
  */
 
 /**
- * IndievoxActiveRecord is model class
+ * FukuPHPActiveRecord is model class
  *
- * An example of a IndievoxActiveRecord is:
+ * An example of a FukuPHPActiveRecord is:
  *
  * <code>
  *   # this class can't be use directly
@@ -28,7 +28,7 @@
  * @version  Release: <0.0.1>
  * @link     http://www.fukuball.com
  */
-abstract class IndievoxActiveRecord
+abstract class FukuPHPActiveRecord
 {
 
    protected $db_obj;
@@ -70,7 +70,7 @@ abstract class IndievoxActiveRecord
       $this->setDBAccess();
       // find this class's table name
       $temp_table_name
-          = str_replace("Indievox", "", get_class($this));
+          = str_replace("", "", get_class($this));
 
       $this->table_name
           = strtolower(
@@ -248,13 +248,13 @@ abstract class IndievoxActiveRecord
 
       case 'normal':
 
-         $this->db_obj = IndievoxDBAccess::getInstance();
+         $this->db_obj = FukuPHPDBAccess::getInstance();
 
          break;
 
       default:
 
-         $this->db_obj = IndievoxDBAccess::getInstance();
+         $this->db_obj = FukuPHPDBAccess::getInstance();
 
          break;
 
@@ -282,7 +282,7 @@ abstract class IndievoxActiveRecord
    public function setMemcacheAccess()
    {
 
-      $this->memcache_obj = IndievoxMemcache::getInstance(
+      $this->memcache_obj = FukuPHPMemcache::getInstance(
           KEY_PREFIX.$this->table_name.'_'.$this->id
       );
 
@@ -732,5 +732,5 @@ abstract class IndievoxActiveRecord
 
    }// end function __destruct
 
-}//end class IndievoxActiveRecord
+}//end class FukuPHPActiveRecord
 ?>

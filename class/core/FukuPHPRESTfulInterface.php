@@ -1,6 +1,6 @@
 <?php
 /**
- * IndievoxRESTfulInterface.php is the interface
+ * FukuPHPRESTfulInterface.php is the interface
  * to describe rest methods
  * 
  * PHP version 5
@@ -14,10 +14,10 @@
  */
  
 /**
- * IndievoxRESTfulInterface is the interface
+ * FukuPHPRESTfulInterface is the interface
  * to describe rest methods
  * 
- * An example of a IndievoxRESTfulInterface is:
+ * An example of a FukuPHPRESTfulInterface is:
  *
  * <code>
  *  # This will done by rest request
@@ -30,7 +30,7 @@
  * @version  Release: <0.0.1>
  * @link     http://www.fukuball.com
  */
-interface IndievoxRESTfulInterface
+interface FukuPHPRESTfulInterface
 {
     
     /**
@@ -69,5 +69,5 @@ interface IndievoxRESTfulInterface
      */
     public function restDelete($segments);
     
-}// end interface IndievoxRESTfulInterface
+}// end interface FukuPHPRESTfulInterface
 ?>

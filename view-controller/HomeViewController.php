@@ -7,10 +7,10 @@
  *
  * @category PHP
  * @package  /view-controller/
- * @author   Fukuball Lin <fukuball@indievox.com>
- * @license  iNDIEVOX Licence
- * @version  Release: <1.0>
- * @link     http://www.indievox.com
+ * @author   Fukuball Lin <fukuball@gmail.com>
+ * @license  MIT Licence
+ * @version  GIT: <0.0.1>
+ * @link     http://www.fukuball.com
  */
 
 /**
@@ -21,14 +21,14 @@
  *
  * @category PHP
  * @package  /view-controller/
- * @author   Fukuball Lin <fukuball@indievox.com>
- * @license  iNDIEVOX Licence
- * @version  Release: <1.0>
- * @link     http://www.indievox.com
+ * @author   Fukuball Lin <fukuball@gmail.com>
+ * @license  MIT Licence
+ * @version  Release: <0.0.1>
+ * @link     http://www.fukuball.com
  */
 class HomeViewController
-   extends IndievoxRESTControl
-      implements IndievoxRESTfulInterface
+   extends FukuPHPRESTControl
+      implements FukuPHPRESTfulInterface
 {
 
    /**
@@ -56,7 +56,7 @@ class HomeViewController
       default:
          $type = 'page_not_found';
          $parameter = array("none"=>"none");
-         $error_messenger = new IndievoxErrorMessenger($type, $parameter);
+         $error_messenger = new FukuPHPErrorMessenger($type, $parameter);
          $error_messenger->printErrorJSON();
          unset($error_messenger);
          break;
@@ -120,7 +120,7 @@ class HomeViewController
 
          $type = 'page_not_found';
          $parameter = array("none"=>"none");
-         $error_messenger = new IndievoxErrorMessenger($type, $parameter);
+         $error_messenger = new FukuPHPErrorMessenger($type, $parameter);
          $error_messenger->printErrorJSON();
          unset($error_messenger);
 
@@ -158,7 +158,7 @@ class HomeViewController
       default:
          $type = 'page_not_found';
          $parameter = array("none"=>"none");
-         $error_messenger = new IndievoxErrorMessenger($type, $parameter);
+         $error_messenger = new FukuPHPErrorMessenger($type, $parameter);
          $error_messenger->printErrorJSON();
          unset($error_messenger);
          break;
@@ -196,7 +196,7 @@ class HomeViewController
       default:
          $type = 'page_not_found';
          $parameter = array("none"=>"none");
-         $error_messenger = new IndievoxErrorMessenger($type, $parameter);
+         $error_messenger = new FukuPHPErrorMessenger($type, $parameter);
          $error_messenger->printErrorJSON();
          unset($error_messenger);
          break;

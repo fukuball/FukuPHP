@@ -1,6 +1,6 @@
 <?php
 /**
- * IndievoxActiveRecordGod.php is abstract record god class
+ * FukuPHPActiveRecordGod.php is abstract record god class
  *
  * PHP version 5
  *
@@ -13,9 +13,9 @@
  */
 
 /**
- * IndievoxActiveRecordGod is abstract record god class
+ * FukuPHPActiveRecordGod is abstract record god class
  *
- * An example of a IndievoxActiveRecordGod is:
+ * An example of a FukuPHPActiveRecordGod is:
  *
  * <code>
  *   # this class can't be use directly
@@ -28,7 +28,7 @@
  * @version  Release: <0.0.1>
  * @link     http://www.fukuball.com
  */
-abstract class IndievoxActiveRecordGod
+abstract class FukuPHPActiveRecordGod
 {
 
    protected $db_obj;
@@ -47,7 +47,7 @@ abstract class IndievoxActiveRecordGod
       // find this class's table name
       $temp_table_name
           = str_replace(
-                  "Indievox",
+                  "FukuPHP",
                   "",
                   str_replace("God", "", get_class($this))
           );
@@ -73,13 +73,13 @@ abstract class IndievoxActiveRecordGod
 
       case 'normal':
 
-         $this->db_obj = IndievoxDBAccess::getInstance();
+         $this->db_obj = FukuPHPDBAccess::getInstance();
 
          break;
 
       default:
 
-         $this->db_obj = IndievoxDBAccess::getInstance();
+         $this->db_obj = FukuPHPDBAccess::getInstance();
 
          break;
 
@@ -283,5 +283,5 @@ abstract class IndievoxActiveRecordGod
 
    }// end function __destruct
 
-}// end class IndievoxActiveRecordGod
+}// end class FukuPHPActiveRecordGod
 ?>

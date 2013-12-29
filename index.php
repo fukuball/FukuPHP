@@ -24,7 +24,7 @@ require_once dirname(__FILE__)."/config/app-setter.php";
  * @version  Release: <0.0.1>
  * @link     http://www.fukuball.com
  */
-class AppContainer extends IndievoxRESTControl
+class AppContainer extends FukuPHPRESTControl
 {
 
    private $_controller = false;

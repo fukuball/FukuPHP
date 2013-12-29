@@ -1,6 +1,6 @@
 <?php
 /**
- * IndievoxDBAccess.php is database class
+ * FukuPHPDBAccess.php is database class
  *
  * PHP version 5
  *
@@ -14,12 +14,12 @@
  // hard code
 
 /**
- * IndievoxDBAccess is database class
+ * FukuPHPDBAccess is database class
  *
- * An example of a IndievoxDBAccess is:
+ * An example of a FukuPHPDBAccess is:
  *
  * <code>
- *   $db_obj = IndievoxDBAccess::getInstance();
+ *   $db_obj = FukuPHPDBAccess::getInstance();
  * </code>
  *
  * @category PHP
@@ -29,7 +29,7 @@
  * @version  Release: <0.0.1>
  * @link     http://www.fukuball.com
  */
-class IndievoxDBAccess
+class FukuPHPDBAccess
 {
 
    protected static $db_obj;
@@ -81,7 +81,7 @@ class IndievoxDBAccess
 
       if (!self::$db_obj || !isset(self::$db_obj) || empty(self::$db_obj)) {
 
-         self::$db_obj = new IndievoxDBAccess();
+         self::$db_obj = new FukuPHPDBAccess();
 
       }
 
@@ -740,8 +740,8 @@ class IndievoxDBAccess
 
    }// end function __destruct
 
-}// end class IndievoxDBAccess
+}// end class FukuPHPDBAccess
 
 // initial db connection
-IndievoxDBAccess::init();
+FukuPHPDBAccess::init();
 ?>

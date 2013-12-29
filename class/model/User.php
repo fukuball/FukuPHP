@@ -1,6 +1,6 @@
 <?php
 /**
- * IndievoxUser.php is user model class
+ * User.php is user model class
  *
  * PHP version 5
  *
@@ -13,12 +13,12 @@
  */
 
  /**
-  * IndievoxUser is user model class
+  * User is user model class
   *
-  * An example of a IndievoxUser is:
+  * An example of a User is:
   *
   * <code>
-  *   $user_obj = new IndievoxUser($instance_key);
+  *   $user_obj = new User($instance_key);
   * </code>
   *
   * @category PHP
@@ -28,9 +28,9 @@
   * @version  Release: <0.0.1>
   * @link     http://www.fukuball.com
   */
-class IndievoxUser extends IndievoxActiveRecord
+class User extends FukuPHPActiveRecord
 {
-   // extends from IndievoxActiveRecord
+   // extends from FukuPHPActiveRecord
    //
    // protected $db_obj;
    // protected $memcache_obj;
@@ -60,5 +60,5 @@ class IndievoxUser extends IndievoxActiveRecord
 
    }// end function __construct
 
-}// end class IndievoxUser
+}// end class User
 ?>

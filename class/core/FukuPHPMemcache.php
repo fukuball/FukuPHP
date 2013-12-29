@@ -1,6 +1,6 @@
 <?php
 /**
- * IndievoxMemcache.php is memcach class
+ * FukuPHPMemcache.php is memcach class
  *
  * PHP version 5
  *
@@ -13,12 +13,12 @@
  */
 
 /**
- * IndievoxMemcache is memcache class
+ * FukuPHPMemcache is memcache class
  *
- * An example of a IndievoxMemcache is:
+ * An example of a FukuPHPMemcache is:
  *
  * <code>
- *   $memcache_obj = IndievoxMemcache::getInstance($key);
+ *   $memcache_obj = FukuPHPMemcache::getInstance($key);
  * </code>
  *
  * @category PHP
@@ -28,7 +28,7 @@
  * @version  Release: <0.0.1>
  * @link     http://www.fukuball.com
  */
-class IndievoxMemcache
+class FukuPHPMemcache
 {
 
    protected static $memcache_server;
@@ -160,7 +160,7 @@ class IndievoxMemcache
    public static function getMemcacheKeys($host)
    {
 
-      $memcache_obj = IndievoxMemcache::connectMemcache($host);
+      $memcache_obj = FukuPHPMemcache::connectMemcache($host);
 
       $list = array();
 
@@ -215,8 +215,8 @@ class IndievoxMemcache
 
    }// end function __destruct
 
-}// end class IndievoxMemcache
+}// end class FukuPHPMemcache
 
 // initial memcache connection
-IndievoxMemcache::init();
+FukuPHPMemcache::init();
 ?>
