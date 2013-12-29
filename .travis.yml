@@ -26,11 +26,12 @@ before_script:
 # use the $DB env variable to determine the phpunit.xml to use
 script:
   - vendor/bin/phpunit --configuration phpunit.xml --colors --coverage-text --coverage-clover build/log/clover.xml
-  - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php --ignore=*/test/* ./class
-  - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php --ignore=*/test/* ./config
-  - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php --ignore=*/test/* ./migration
-  - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php --ignore=*/test/* ./view-controller
-  - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php --ignore=*/test/* ./index.php
+  - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php ./class
+  - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php ./config
+  - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php ./migration
+  - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php ./view-controller
+  - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php ./index.php
+  #- vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php --ignore=*/test/* ./index.php
 
 # configure notifications (email, IRC, campfire etc)
 #notifications:
