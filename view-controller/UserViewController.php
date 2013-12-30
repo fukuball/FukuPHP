@@ -209,10 +209,7 @@ class UserViewController
       $user_id = $url_matches_param['user_id'];
       $user_obj = new User($user_id);
       echo "This is user ".$user_obj->username.'<br/>';
-      
-      echo $user_obj->create_time.'<br/>';
-
-      echo FukuPHPStringHelper::studly('username');
+      unset($user_obj);
 
    }// end function getUserAction
 
