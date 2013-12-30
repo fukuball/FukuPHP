@@ -211,7 +211,8 @@ class UserViewController
          unset($user_obj);  
       } else {
          $user_god_obj = new UserGod();
-         $page_owner_id = $user_god_obj->getUserId($the_class_string, 'path');
+         $path = $url_matches_param['path'];
+         $page_owner_id = $user_god_obj->getUserId($path, 'path');
          $user_obj = new User($page_owner_id);
          echo "This is user ".$user_obj->path.'<br/>';
          unset($user_obj);  
