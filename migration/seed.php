@@ -49,7 +49,7 @@ $sql = "CREATE TABLE IF NOT EXISTS `user` (".
         "`path` char(30) NOT NULL,".
         "`is_deleted` tinyint(1) unsigned NOT NULL DEFAULT '0',".
         "`create_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',".
-        "`modity_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',".
+        "`modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',".
         "`delete_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',".
         "PRIMARY KEY (`id`)".
       ") ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;";

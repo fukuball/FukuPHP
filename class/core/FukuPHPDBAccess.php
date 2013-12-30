@@ -639,12 +639,11 @@ class FukuPHPDBAccess
       $options = array('mode'=>'master');
       $this->changeMode($options);
 
-      //if (SYSTEM_MODE=='test') {
+      if (SYSTEM_MODE=='test') {
          $this->db_connection->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
-      //}
+      }
       $this->db_connection->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
       $statement = $this->db_connection->prepare($update_sql);
-      var_dump($statement);
       $query_result = $statement->execute($param);
 
       if (!$query_result) {
