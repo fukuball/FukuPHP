@@ -62,24 +62,15 @@ class UserGod extends FukuPHPActiveRecordGod
          $param = array(
             ":value"=>$input
          );
+
+         $query_result = $this->db_obj->selectCommandPrepare($select_sql, $param);
+
+         foreach ($query_result as $query_result_data) {
+            $user_id = $query_result_data['id'];
+         }
+
          break;
 
-      default :
-         // give a sql for avoiding error
-         $select_sql = "SELECT ".
-                       "id ".
-                       "FROM user ".
-                       "WHERE is_deleted = 1 ".
-                       "AND is_deleted = 0";
-         $param = array();
-         break;
-
-      }
-
-      $query_result = $this->db_obj->selectCommandPrepare($select_sql, $param);
-
-      foreach ($query_result as $query_result_data) {
-         $user_id = $query_result_data['id'];
       }
 
       return $user_id;
