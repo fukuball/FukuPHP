@@ -59,5 +59,12 @@ class User extends FukuPHPActiveRecord
 
    }// end function __construct
 
+   public function getUsername()
+   {
+
+      return $this->username.' form getter';
+
+   }
+
 }// end class User
 ?>
