@@ -205,8 +205,6 @@ class UserViewController
       if (isset($url_matches_param['user_id'])) {
          $user_id = $url_matches_param['user_id'];
          $user_obj = new User($user_id);
-         $user_obj->path = 'fukuball';
-         $user_obj->save();
          echo "This is user ".$user_obj->path.'<br/>';
          unset($user_obj);  
       } else {
