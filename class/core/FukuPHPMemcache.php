@@ -54,8 +54,6 @@ class FukuPHPMemcache
 
             self::$memcache_server[$this_memcache_server_name] = '';
 
-            echo $memcache_server[$this_memcache_server_name]['cache_host'];
-
             if ($count==1) {
 
                if (    !self::$memcache_server[$this_memcache_server_name]

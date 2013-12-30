@@ -95,8 +95,6 @@ abstract class FukuPHPActiveRecord
 
       if ($instance_memcached == false) {
 
-         echo "from db";
-
          $select_sql
              = 'SELECT * '.
                'FROM '.$this->table_name.' '.
@@ -205,8 +203,6 @@ abstract class FukuPHPActiveRecord
          }// end if (!empty($this->id) && $this->use_cache=='memcache')
 
       } else {
-
-         echo "from cache";
 
          foreach ($class_property_array as $property_key => $property_value) {
 
