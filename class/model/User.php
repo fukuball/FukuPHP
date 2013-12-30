@@ -59,19 +59,5 @@ class User extends FukuPHPActiveRecord
 
    }// end function __construct
 
-   public function getUsername()
-   {
-
-      return $this->username.' form getter';
-
-   }
-
-   public function getCreateTime()
-   {
-
-      return $this->create_time.' form getter';
-
-   }
-
 }// end class User
 ?>
