@@ -54,11 +54,7 @@ class UserViewController
       switch ($request_url) {
 
       default:
-         $type = 'page_not_found';
-         $parameter = array("none"=>"none");
-         $error_messenger = new FukuPHPErrorMessenger($type, $parameter);
-         $error_messenger->printErrorJSON();
-         unset($error_messenger);
+         self::pageNotFound();
          break;
 
       }// end switch ($action_level_one_id)
@@ -107,13 +103,7 @@ class UserViewController
          break;
 
       default:
-
-         $type = 'page_not_found';
-         $parameter = array("none"=>"none");
-         $error_messenger = new FukuPHPErrorMessenger($type, $parameter);
-         $error_messenger->printErrorJSON();
-         unset($error_messenger);
-
+         self::pageNotFound();
          break;
 
       }// end switch ($action_level_one_id)
@@ -146,11 +136,7 @@ class UserViewController
       switch ($request_url) {
 
       default:
-         $type = 'page_not_found';
-         $parameter = array("none"=>"none");
-         $error_messenger = new FukuPHPErrorMessenger($type, $parameter);
-         $error_messenger->printErrorJSON();
-         unset($error_messenger);
+         self::pageNotFound();
          break;
 
       }// end switch ($action_level_one_id)
@@ -184,11 +170,7 @@ class UserViewController
       switch ($request_url) {
 
       default:
-         $type = 'page_not_found';
-         $parameter = array("none"=>"none");
-         $error_messenger = new FukuPHPErrorMessenger($type, $parameter);
-         $error_messenger->printErrorJSON();
-         unset($error_messenger);
+         self::pageNotFound();
          break;
 
       }// end switch ($action_level_one_id)

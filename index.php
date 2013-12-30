@@ -104,7 +104,7 @@ class AppContainer extends FukuPHPRESTControl
 
       if ( !method_exists($this->_controller, $method) ) {
 
-         self::exceptionResponse(405, 'Method not Allowed!');
+         self::pageNotFound();
 
       }
 

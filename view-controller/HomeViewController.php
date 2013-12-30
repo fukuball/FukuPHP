@@ -54,11 +54,7 @@ class HomeViewController
       switch ($request_url) {
 
       default:
-         $type = 'page_not_found';
-         $parameter = array("none"=>"none");
-         $error_messenger = new FukuPHPErrorMessenger($type, $parameter);
-         $error_messenger->printErrorJSON();
-         unset($error_messenger);
+         self::pageNotFound();
          break;
 
       }// end switch ($action_level_one_id)
@@ -87,43 +83,16 @@ class HomeViewController
 
       switch ($request_url) {
 
-      case (
-         preg_match(
-            "/^\/home\/(?<year>\d{4})\/(?<month>\d{2})\/$/",
-            $request_url,
-            $url_matches_param
-         ) ? true : false
-      ) :
-      case (
-         preg_match(
-            "/^\/home\/(?<year>\d{4})\/(?<month>\d{2})$/",
-            $request_url,
-            $url_matches_param
-         ) ? true : false
-      ) :
-
-         self::demoAction($url_matches_param, $_GET);
-
-         break;
-
       case '/index.php':
       case '/index.html':
       case '/index':
       case '/':
       case '':
-
-         self::indexAction($url_matches_param, $_GET);
-
+         self::getIndexAction($url_matches_param, $_GET);
          break;
 
       default:
-
-         $type = 'page_not_found';
-         $parameter = array("none"=>"none");
-         $error_messenger = new FukuPHPErrorMessenger($type, $parameter);
-         $error_messenger->printErrorJSON();
-         unset($error_messenger);
-
+         self::pageNotFound();
          break;
 
       }// end switch ($action_level_one_id)
@@ -156,11 +125,7 @@ class HomeViewController
       switch ($request_url) {
 
       default:
-         $type = 'page_not_found';
-         $parameter = array("none"=>"none");
-         $error_messenger = new FukuPHPErrorMessenger($type, $parameter);
-         $error_messenger->printErrorJSON();
-         unset($error_messenger);
+         self::pageNotFound();
          break;
 
       }// end switch ($action_level_one_id)
@@ -194,11 +159,7 @@ class HomeViewController
       switch ($request_url) {
 
       default:
-         $type = 'page_not_found';
-         $parameter = array("none"=>"none");
-         $error_messenger = new FukuPHPErrorMessenger($type, $parameter);
-         $error_messenger->printErrorJSON();
-         unset($error_messenger);
+         self::pageNotFound();
          break;
 
       }// end switch ($action_level_one_id)
@@ -213,29 +174,13 @@ class HomeViewController
     *
     * @return void
     */
-   public static function indexAction($url_matches_param, $GET)
+   public static function getIndexAction($url_matches_param, $GET)
    {
 
       $yield_path = '/view-page/index.php';
       require_once SITE_ROOT.'/view-layout/default-layout.php';
 
    }// end function indexAction
-
-   /**
-    * Method static demoAction
-    *
-    * @param array $url_matches_param
-    * @param array $GET
-    *
-    * @return void
-    */
-   public static function demoAction($url_matches_param, $GET)
-   {
-
-      print_r($url_matches_param);
-      print_r($GET);
-
-   }// end function demoAction
 
 }
 ?>

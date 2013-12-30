@@ -34,21 +34,21 @@ class FukuPHPRESTControl
 {
 
    /**
-    * Method exceptionResponse output some default exception
-    *
-    * @param int    $statusCode # the http status code
-    * @param string $message    # status message
+    * Method pageNotFound
     *
     * @return void
     */
-   static function exceptionResponse($statusCode, $message)
+   static function pageNotFound()
    {
 
-      header("HTTP/1.0 {$statusCode} {$message}");
-      echo "{$statusCode} {$message}";
+      $type = 'page_not_found';
+      $parameter = array("none"=>"none");
+      $error_messenger = new FukuPHPErrorMessenger($type, $parameter);
+      $error_messenger->printErrorJSON();
+      unset($error_messenger);
       exit;
 
-   }// end function exceptionResponse
+   }// end function pageNotFound
 
 
 }// end class FukuPHPRESTControl
