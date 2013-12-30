@@ -212,7 +212,7 @@ class UserViewController
       
       echo $user_obj->create_time.'<br/>';
 
-      echo FukuPHPStringHelper::studly($username);
+      echo FukuPHPStringHelper::studly('username');
 
    }// end function getUserAction
 
