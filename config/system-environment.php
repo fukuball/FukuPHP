@@ -24,5 +24,5 @@ define("SITE_HOST", $host_protocol."://www.fuku.io");
 define("SITE_DOMAIN", "www.fuku.io");
 define("SYSTEM_MODE", 'production'); // production, test
 define("KEY_PREFIX", "fukuphp_");
-define("ENABLE_CACHE", false);
+define("ENABLE_CACHE", true);
 ?>
