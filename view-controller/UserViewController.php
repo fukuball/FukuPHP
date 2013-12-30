@@ -206,8 +206,10 @@ class UserViewController
    public static function getUserAction($url_matches_param, $GET)
    {
 
-      print_r($url_matches_param);
-      print_r($GET);
+      $user_id = $url_matches_param['user_id'];
+      $user_obj = new User($user_id);
+      echo "This is user ".$user_obj->username;
+      unset($user_obj);
 
    }// end function getUserAction
 

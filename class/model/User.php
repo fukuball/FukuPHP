@@ -52,10 +52,9 @@ class User extends FukuPHPActiveRecord
     *
     * @return void
     */
-   public function __construct($instance_key, $use_cache='no_cache')
+   public function __construct($instance_key, $use_cache='memcache')
    {
 
-      $use_cache = 'no_cache';
       parent::__construct($instance_key, $use_cache);
 
    }// end function __construct

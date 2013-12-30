@@ -70,7 +70,7 @@ abstract class FukuPHPActiveRecord
       $this->setDBAccess();
       // find this class's table name
       $temp_table_name
-          = str_replace("", "", get_class($this));
+          = str_replace("FukuPHP", "", get_class($this));
 
       $this->table_name
           = strtolower(
@@ -699,6 +699,44 @@ abstract class FukuPHPActiveRecord
       return $result;
 
    }// end function recover
+
+   /**
+    * Method __get to overwrite original getter
+    *
+    * @return mix $attribute
+    */
+   public function __get($key) {
+      
+      if ( method_exists($this, $method = 'get'.FukuPHPStringHelper::studly($key)) ) {
+         
+         return $this->$method($key);
+      
+      } else {
+
+         return isset($this->$key)? $this->$key : null;
+      
+      }
+
+   }// end function __get
+
+   /**
+    * Method __set to overwrite original setter
+    *
+    * @return void
+    */
+   public function __set($key, $value) {
+
+      if ( method_exists($this, $method = 'set'.FukuPHPStringHelper::studly($key)) ) {
+         
+         $this->$method($key, $value);
+      
+      } else {
+         
+         $this->$key = $value;
+      
+      }
+   
+   }// end function __set
 
    /**
     * Method __destruct unset instance value
