@@ -85,6 +85,13 @@ class UserViewController
 
       case (
          preg_match(
+            "/^\/(?<path>\([a-z0-9_-]+))\/$/",
+            $request_url,
+            $url_matches_param
+         ) ? true : false
+      ) :
+      case (
+         preg_match(
             "/^\/user\/(?<user_id>\d+)\/$/",
             $request_url,
             $url_matches_param
@@ -188,12 +195,13 @@ class UserViewController
    public static function getUserAction($url_matches_param, $GET)
    {
 
-      $user_id = $url_matches_param['user_id'];
-      $user_obj = new User($user_id);
+      print_r($url_matches_param);
+      //$user_id = $url_matches_param['user_id'];
+      //$user_obj = new User($user_id);
       //$user_obj->path = 'fukuball';
       //$user_obj->save();
-      echo "This is user ".$user_obj->path.'<br/>';
-      unset($user_obj);
+      //echo "This is user ".$user_obj->path.'<br/>';
+      //unset($user_obj);
 
    }// end function getUserAction
 
