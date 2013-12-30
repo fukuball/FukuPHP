@@ -644,6 +644,7 @@ class FukuPHPDBAccess
       }
       $this->db_connection->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
       $statement = $this->db_connection->prepare($update_sql);
+      var_dump($statement);
       $query_result = $statement->execute($param);
 
       if (!$query_result) {
