@@ -50,9 +50,7 @@ class UserGod extends FukuPHPActiveRecordGod
 
       switch ($type) {
 
-      case 'email':
       case 'path':
-      case 'access_token':
          $select_sql = "SELECT ".
                        "id ".
                        "FROM user ".
