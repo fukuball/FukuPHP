@@ -85,7 +85,7 @@ class UserViewController
 
       case (
          preg_match(
-            "/^\/(?<path>\([a-z0-9_-]+))\/$/",
+            "/^\/(?<path>([a-z0-9_-]+))\/$/",
             $request_url,
             $url_matches_param
          ) ? true : false
