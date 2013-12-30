@@ -12,22 +12,22 @@
  * @link     http://www.fukuball.com
  */
 
- /**
-  * User is user model class
-  *
-  * An example of a User is:
-  *
-  * <code>
-  *   $user_obj = new User($instance_key);
-  * </code>
-  *
-  * @category PHP
-  * @package  /class/model/
-  * @author   Fukuball Lin <fukuball@gmail.com>
-  * @license  MIT Licence
-  * @version  Release: <0.0.1>
-  * @link     http://www.fukuball.com
-  */
+/**
+ * User is user model class
+ *
+ * An example of a User is:
+ *
+ * <code>
+ *   $user_obj = new User($instance_key);
+ * </code>
+ *
+ * @category PHP
+ * @package  /class/model/
+ * @author   Fukuball Lin <fukuball@gmail.com>
+ * @license  MIT Licence
+ * @version  Release: <0.0.1>
+ * @link     http://www.fukuball.com
+ */
 class User extends FukuPHPActiveRecord
 {
    // extends from FukuPHPActiveRecord
@@ -42,22 +42,7 @@ class User extends FukuPHPActiveRecord
    // protected $modify_time;
    // protected $delete_time;
    // protected $modify_unix_time;
-   protected $username;
-
-   /**
-    * Method __construct initialize instance
-    *
-    * @param int    $instance_key # the key of instance
-    * @param string $use_cache    # use what cache
-    *
-    * @return void
-    */
-   public function __construct($instance_key, $use_cache='memcache')
-   {
-
-      parent::__construct($instance_key, $use_cache);
-
-   }// end function __construct
+   protected $path;
 
 }// end class User
 ?>

@@ -46,7 +46,7 @@ if (!$db_selected) {
 //user_token
 $sql = "CREATE TABLE IF NOT EXISTS `user` (".
         "`id` int(11) unsigned NOT NULL AUTO_INCREMENT,".
-        "`username` char(30) NOT NULL,".
+        "`path` char(30) NOT NULL,".
         "`is_deleted` tinyint(1) unsigned NOT NULL DEFAULT '0',".
         "`create_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',".
         "`modity_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',".

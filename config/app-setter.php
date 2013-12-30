@@ -24,6 +24,8 @@ require_once dirname(__FILE__).'/system-environment.php';
 // some settings
 define('DEFAULT_VIEW_CONTROLLER_PATH', SITE_ROOT.'/view-controller/HomeViewController.php');
 define('DEFAULT_VIEW_CONTROLLER', 'HomeViewController');
+define('USER_VIEW_CONTROLLER_PATH', SITE_ROOT.'/view-controller/UserViewController.php');
+define('USER_VIEW_CONTROLLER', 'UserViewController');
 
 // library
 require_once SITE_ROOT.'/class/FukuPHP.inc';

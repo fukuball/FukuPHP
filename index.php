@@ -79,10 +79,24 @@ class AppContainer extends FukuPHPRESTControl
       } else { // can't find controller
 
          // find user path
+         $user_god_obj = new UserGod();
+         $page_owner_id = $user_god_obj->getUserId($the_class_string, 'path');
+         
+         if ($user_god_obj->isExist($page_owner_id)) {
 
-         // or default controller
-         include_once DEFAULT_VIEW_CONTROLLER_PATH;
-         $controller_name = DEFAULT_VIEW_CONTROLLER;
+            // or default controller
+            include_once USER_VIEW_CONTROLLER_PATH;
+            $controller_name = USER_VIEW_CONTROLLER;
+
+         } else {
+
+            // or default controller
+            include_once DEFAULT_VIEW_CONTROLLER_PATH;
+            $controller_name = DEFAULT_VIEW_CONTROLLER;    
+         
+         }
+
+         unset($user_god_obj);
 
       }
 

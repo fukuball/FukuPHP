@@ -19,7 +19,6 @@
     <testsuites>
         <testsuite name="PHP FukuPHP test suite">
             <directory>./test/</directory>
-            <file>./index.php</file>
         </testsuite>
     </testsuites>
 
@@ -27,6 +26,7 @@
         <whitelist>
             <directory>./class</directory>
             <directory>./view-controller</directory>
+            <file>./index.php</file>
             <exclude>
                 <directory>./asset</directory>
                 <directory>./build</directory>
@@ -40,6 +40,7 @@
                 <directory>./view-component</directory>
                 <directory>./view-layout</directory>
                 <directory>./view-page</directory>
+                <file>./class/FukuPHP.inc</file>
             </exclude>
         </whitelist>
     </filter>
