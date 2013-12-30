@@ -42,7 +42,7 @@ class User extends FukuPHPActiveRecord
    // protected $modify_time;
    // protected $delete_time;
    // protected $modify_unix_time;
-   public $username;
+   protected $username;
 
    /**
     * Method __construct initialize instance
