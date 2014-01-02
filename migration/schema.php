@@ -14,7 +14,7 @@
 
 require_once dirname(dirname(__FILE__))."/config/db-param.php";
 
-$db_name       = $database_server['master']['db_name'];
+$db_name = $database_server['master']['db_name'];
 
 $create_database_sql = "CREATE DATABASE $db_name";
 
