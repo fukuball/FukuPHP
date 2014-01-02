@@ -19,7 +19,7 @@ if ($_SERVER['HTTPS'] == 'on') {
 }
 
 // stage mode
-define("SITE_ROOT", "/var/www/FukuPHP");
+define("SITE_ROOT", dirname(dirname(__FILE__)));
 define("SITE_HOST", $host_protocol."://www.fuku.io");
 define("SITE_DOMAIN", "www.fuku.io");
 define("SYSTEM_MODE", 'production'); // production, test
