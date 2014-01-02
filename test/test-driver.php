@@ -12,6 +12,8 @@
  * @link     http://www.indievox.com
  */
 
+require_once dirname(dirname(__FILE__))."/config/app-setter.php";
+
 // core
 function core_loader($class_name) {
     $file = dirname(dirname(__FILE__)).'/class/core/'.$class_name . '.php';
