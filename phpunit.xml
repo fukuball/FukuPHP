@@ -10,11 +10,11 @@
          stopOnFailure="false"
          syntaxCheck="false"
          bootstrap="test/test-driver.php">
-    <!--<php>
-        <var name="db_dsn" value="mysql:dbname=hello_world_test;host=localhost"/>
-        <var name="db_username" value="root"/>
+    <php>
+        <var name="db_dsn" value="mysql:dbname=fukuphp;host=localhost"/>
+        <var name="db_username" value="fukuphp"/>
         <var name="db_password" value=""/>
-    </php>-->
+    </php>
 
     <testsuites>
         <testsuite name="PHP FukuPHP test suite">
@@ -46,7 +46,7 @@
     </filter>
 
     <logging>
-        <log type="coverage-clover" target="build/logs/clover.xml"/>
-        <log type="junit" target="build/logs/junit.xml" logIncompleteSkipped="false"/>
+        <log type="coverage-clover" target="build/log/clover.xml"/>
+        <log type="junit" target="build/log/junit.xml" logIncompleteSkipped="false"/>
     </logging>
 </phpunit>
