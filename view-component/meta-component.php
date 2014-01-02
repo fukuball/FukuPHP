@@ -17,4 +17,4 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="shortcut icon" href="/public/image/favicon.png">
-<title><?php $page_title; ?></title>
+<title><?php echo $page_title; ?></title>
