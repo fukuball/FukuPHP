@@ -50,8 +50,12 @@ class FukuPHPDBAccess
     private function __construct()
     {
  
-        include SITE_ROOT."/config/db-param.php";
- 
+        if (SYSTEM_MODE=='test') {
+            include SITE_ROOT."/config/test-db-param.php";
+        } else {
+            include SITE_ROOT."/config/db-param.php";
+        }
+
         $this->context_status = 'one_time';
         $this->db_name_poll = array();
         $this->db_connection_poll = array();
@@ -102,7 +106,11 @@ class FukuPHPDBAccess
             && $this_db_obj->current_mode!='random'
         ) {
  
-            include SITE_ROOT."/config/db-param.php";
+            if (SYSTEM_MODE=='test') {
+                include SITE_ROOT."/config/test-db-param.php";
+            } else {
+                include SITE_ROOT."/config/db-param.php";
+            }
  
             if (!empty($slave_database_name)) {
  
@@ -179,7 +187,11 @@ class FukuPHPDBAccess
     public function connectMaster()
     {
  
-        include SITE_ROOT."/config/db-param.php";
+        if (SYSTEM_MODE=='test') {
+            include SITE_ROOT."/config/test-db-param.php";
+        } else {
+            include SITE_ROOT."/config/db-param.php";
+        }
  
         // connect master
         $m_db_host       = $database_server['master']['db_host'];
@@ -229,7 +241,11 @@ class FukuPHPDBAccess
  
         $options = array_merge($defaults, $options);
  
-        include SITE_ROOT."/config/db-param.php";
+        if (SYSTEM_MODE=='test') {
+            include SITE_ROOT."/config/test-db-param.php";
+        } else {
+            include SITE_ROOT."/config/db-param.php";
+        }
  
         if (!empty($slave_database_name)) {
  
@@ -326,7 +342,11 @@ class FukuPHPDBAccess
     public function changeMode($options=array())
     {
  
-        include SITE_ROOT."/config/db-param.php";
+        if (SYSTEM_MODE=='test') {
+            include SITE_ROOT."/config/test-db-param.php";
+        } else {
+            include SITE_ROOT."/config/db-param.php";
+        }
  
         $defaults = array('mode'=>'slave');
  

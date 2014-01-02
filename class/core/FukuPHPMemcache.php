@@ -44,7 +44,11 @@ class FukuPHPMemcache
  
         if (ENABLE_CACHE) {
  
-            include SITE_ROOT."/config/memcache-param.php";
+            if (SYSTEM_MODE=='test') {
+                include SITE_ROOT."/config/test-memcache-param.php";
+            } else {
+                include SITE_ROOT."/config/memcache-param.php";
+            }
  
             self::$memcache_server = array();
  
@@ -88,7 +92,11 @@ class FukuPHPMemcache
     public static function getInstance($memcache_key)
     {
  
-        include SITE_ROOT."/config/memcache-param.php";
+        if (SYSTEM_MODE=='test') {
+            include SITE_ROOT."/config/test-memcache-param.php";
+        } else {
+            include SITE_ROOT."/config/memcache-param.php";
+        }
  
         if (!empty($memcache_server_name)) {
  
