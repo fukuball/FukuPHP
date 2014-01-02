@@ -16,19 +16,19 @@ $database_server = array(
    "master"=>array(
       "db_host"=>'localhost',
       "db_name"=>'fukuphp',
-      "db_user"=>'fukuphp',
+      "db_user"=>'root',
       "db_password"=>''
    ),
    "slave1"=>array(
       "db_host"=>'localhost',
       "db_name"=>'fukuphp',
-      "db_user"=>'fukuphp',
+      "db_user"=>'root',
       "db_password"=>''
    ),
    "slave2"=>array(
       "db_host"=>'localhost',
       "db_name"=>'fukuphp',
-      "db_user"=>'fukuphp',
+      "db_user"=>'root',
       "db_password"=>'',
    ),
 );
