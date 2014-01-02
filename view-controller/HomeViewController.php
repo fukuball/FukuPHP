@@ -149,6 +149,7 @@ class HomeViewController
     public static function getIndexAction($url_matches_param, $GET)
     {
  
+        $page_title = 'Home Index Page';
         $yield_path = '/view-page/index.php';
         include_once SITE_ROOT.'/view-layout/default-layout.php';
  
