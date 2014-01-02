@@ -30,10 +30,7 @@ before_script:
 script:
   - vendor/bin/phpunit --configuration phpunit.xml --colors --coverage-text --coverage-clover build/logs/clover.xml
   - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php ./class
-  - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php ./config
-  - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php ./migration
   - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php ./view-controller
-  - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php ./index.php
   #- vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php --ignore=*/test/* ./index.php
 
 # configure notifications (email, IRC, campfire etc)
