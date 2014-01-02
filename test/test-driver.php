@@ -12,7 +12,7 @@
  * @link     http://www.indievox.com
  */
 
-dirname(dirname(__FILE__)).'/class/FukuPHP.inc';
+//dirname(dirname(__FILE__)).'/class/FukuPHP.inc';
 
 function loader($class) {
     $file = $class . '.php';
