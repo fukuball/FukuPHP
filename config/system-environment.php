@@ -15,7 +15,7 @@
 // http or https
 $host_protocol = 'http';
 if ($_SERVER['HTTPS'] == 'on') {
-   $host_protocol = 'https';
+    $host_protocol = 'https';
 }
 
 // stage mode

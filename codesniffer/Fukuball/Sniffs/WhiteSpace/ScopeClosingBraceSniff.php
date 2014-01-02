@@ -35,7 +35,7 @@ class Fukuball_Sniffs_WhiteSpace_ScopeClosingBraceSniff implements PHP_CodeSniff
      *
      * @var int
      */
-    public $indent = 3;
+    public $indent = 4;
 
 
     /**

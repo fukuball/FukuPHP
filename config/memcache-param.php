@@ -13,14 +13,14 @@
  */
 
 $memcache_server = array(
-   "host1"=>array(
-      "cache_host"=>'localhost',
-      "cache_port"=>'11211'
-   ),
-   "host2"=>array(
-      "cache_host"=>'localhost',
-      "cache_port"=>'11211'
-   )
+    "host1"=>array(
+        "cache_host"=>'localhost',
+        "cache_port"=>'11211'
+    ),
+    "host2"=>array(
+        "cache_host"=>'localhost',
+        "cache_port"=>'11211'
+    )
 );
 
 $memcache_server_name = array('host1', 'host2');

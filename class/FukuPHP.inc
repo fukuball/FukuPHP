@@ -34,7 +34,7 @@ spl_autoload_register('helper_loader');
 function model_loader($class_name) {
     $file = dirname(dirname(__FILE__)).'/class/model/'.$class_name . '.php';
     if (file_exists($file)) {
-    	require_once $file;
+        require_once $file;
     }
 }
 spl_autoload_register('model_loader');

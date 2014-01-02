@@ -33,22 +33,22 @@
 class FukuPHPRESTControl
 {
 
-   /**
-    * Method pageNotFound
-    *
-    * @return void
-    */
-   static function pageNotFound()
-   {
+    /**
+     * Method pageNotFound
+     *
+     * @return void
+     */
+    static function pageNotFound()
+    {
 
-      $type = 'page_not_found';
-      $parameter = array("none"=>"none");
-      $error_messenger = new FukuPHPErrorMessenger($type, $parameter);
-      $error_messenger->printErrorJSON();
-      unset($error_messenger);
-      exit;
-
-   }// end function pageNotFound
+        $type = 'page_not_found';
+        $parameter = array("none"=>"none");
+        $error_messenger = new FukuPHPErrorMessenger($type, $parameter);
+        $error_messenger->printErrorJSON();
+        unset($error_messenger);
+        exit;c
+ 
+    }// end function pageNotFound
 
 
 }// end class FukuPHPRESTControl

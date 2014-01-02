@@ -34,7 +34,7 @@ class Fukuball_Sniffs_WhiteSpace_ObjectOperatorIndentSniff implements PHP_CodeSn
      *
      * @var int
      */
-    public $indent = 3;
+    public $indent = 4;
 
 
     /**

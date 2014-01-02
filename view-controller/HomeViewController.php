@@ -27,160 +27,160 @@
  * @link     http://www.fukuball.com
  */
 class HomeViewController
-   extends FukuPHPRESTControl
-      implements FukuPHPRESTfulInterface
+    extends FukuPHPRESTControl
+        implements FukuPHPRESTfulInterface
 {
 
-   /**
-    * Dispatch post actions
-    *
-    * @param array $segments Method segments indicate action and resource
-    *
-    * @return void
-    */
-   public function restPost($segments)
-   {
-
-      $request_url = '/';
-
-      if ( isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] != '/' ) {
-
-         $request_url = $_SERVER['PATH_INFO'];
-
-      }
-
-      $url_matches_param = array();
-
-      switch ($request_url) {
-
-      default:
-         self::pageNotFound();
-         break;
-
-      }// end switch ($action_level_one_id)
-
-   }// end function restPost
-
-   /**
-    * Dispatch get actions
-    *
-    * @param array $segments Method segments indicate action and resource
-    *
-    * @return void
-    */
-   public function restGet($segments)
-   {
-
-      $request_url = '/';
-
-      if ( isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] != '/' ) {
-
-         $request_url = $_SERVER['PATH_INFO'];
-
-      }
-
-      $url_matches_param = array();
-
-      switch ($request_url) {
-
-      case '/index.php':
-      case '/index.html':
-      case '/index':
-      case '/':
-      case '':
-         self::getIndexAction($url_matches_param, $_GET);
-         break;
-
-      default:
-         self::pageNotFound();
-         break;
-
-      }// end switch ($action_level_one_id)
-
-   }// end function restGet
-
-   /**
-    * Dispatch put actions
-    *
-    * @param array $segments Method segments indicate action and resource
-    *
-    * @return void
-    */
-   public function restPut($segments)
-   {
-
-      $_PUT = array();
-      parse_str(file_get_contents('php://input'), $_PUT);
-
-      $request_url = '/';
-
-      if ( isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] != '/' ) {
-
-         $request_url = $_SERVER['PATH_INFO'];
-
-      }
-
-      $url_matches_param = array();
-
-      switch ($request_url) {
-
-      default:
-         self::pageNotFound();
-         break;
-
-      }// end switch ($action_level_one_id)
-
-   }// end function restPut
-
-
-   /**
-    * Dispatch delete actions
-    *
-    * @param array $segments Method segments indicate action and resource
-    *
-    * @return void
-    */
-   public function restDelete($segments)
-   {
-
-      $_DELETE = array();
-      parse_str(file_get_contents('php://input'), $_DELETE);
-
-      $request_url = '/';
-
-      if ( isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] != '/' ) {
-
-         $request_url = $_SERVER['PATH_INFO'];
-
-      }
-
-      $url_matches_param = array();
-
-      switch ($request_url) {
-
-      default:
-         self::pageNotFound();
-         break;
-
-      }// end switch ($action_level_one_id)
-
-   }// end function restDelete
-
-   /**
-    * Method static indexAction
-    *
-    * @param array $url_matches_param
-    * @param array $GET
-    *
-    * @return void
-    */
-   public static function getIndexAction($url_matches_param, $GET)
-   {
-
-      $yield_path = '/view-page/index.php';
-      require_once SITE_ROOT.'/view-layout/default-layout.php';
-
-   }// end function indexAction
+    /**
+     * Dispatch post actions
+     *
+     * @param array $segments Method segments indicate action and resource
+     *
+     * @return void
+     */
+    public function restPost($segments)
+    {
+ 
+        $request_url = '/';
+ 
+        if ( isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] != '/' ) {
+ 
+            $request_url = $_SERVER['PATH_INFO'];
+ 
+        }
+ 
+        $url_matches_param = array();
+ 
+        switch ($request_url) {
+ 
+        default:
+            self::pageNotFound();
+            break;
+ 
+        }// end switch ($action_level_one_id)
+ 
+    }// end function restPost
+ 
+    /**
+     * Dispatch get actions
+     *
+     * @param array $segments Method segments indicate action and resource
+     *
+     * @return void
+     */
+    public function restGet($segments)
+    {
+ 
+        $request_url = '/';
+ 
+        if ( isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] != '/' ) {
+ 
+            $request_url = $_SERVER['PATH_INFO'];
+ 
+        }
+ 
+        $url_matches_param = array();
+ 
+        switch ($request_url) {
+ 
+        case '/index.php':
+        case '/index.html':
+        case '/index':
+        case '/':
+        case '':
+            self::getIndexAction($url_matches_param, $_GET);
+            break;
+ 
+        default:
+            self::pageNotFound();
+            break;
+ 
+        }// end switch ($action_level_one_id)
+ 
+    }// end function restGet
+ 
+    /**
+     * Dispatch put actions
+     *
+     * @param array $segments Method segments indicate action and resource
+     *
+     * @return void
+     */
+    public function restPut($segments)
+    {
+ 
+        $_PUT = array();
+        parse_str(file_get_contents('php://input'), $_PUT);
+ 
+        $request_url = '/';
+ 
+        if ( isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] != '/' ) {
+ 
+            $request_url = $_SERVER['PATH_INFO'];
+ 
+        }
+ 
+        $url_matches_param = array();
+ 
+        switch ($request_url) {
+ 
+        default:
+            self::pageNotFound();
+            break;
+ 
+        }// end switch ($action_level_one_id)
+ 
+    }// end function restPut
+ 
+ 
+    /**
+     * Dispatch delete actions
+     *
+     * @param array $segments Method segments indicate action and resource
+     *
+     * @return void
+     */
+    public function restDelete($segments)
+    {
+ 
+        $_DELETE = array();
+        parse_str(file_get_contents('php://input'), $_DELETE);
+ 
+        $request_url = '/';
+ 
+        if ( isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] != '/' ) {
+ 
+            $request_url = $_SERVER['PATH_INFO'];
+ 
+        }
+ 
+        $url_matches_param = array();
+ 
+        switch ($request_url) {
+ 
+        default:
+            self::pageNotFound();
+            break;
+ 
+        }// end switch ($action_level_one_id)
+ 
+    }// end function restDelete
+ 
+    /**
+     * Method static indexAction
+     *
+     * @param array $url_matches_param # input url_matches_param
+     * @param array $GET               # input GET
+     *
+     * @return void
+     */
+    public static function getIndexAction($url_matches_param, $GET)
+    {
+ 
+        $yield_path = '/view-page/index.php';
+        include_once SITE_ROOT.'/view-layout/default-layout.php';
+ 
+    }// end function indexAction
 
 }
 ?>

@@ -33,7 +33,7 @@ class Fukuball_Sniffs_Functions_FunctionDeclarationSniff implements PHP_CodeSnif
      *
      * @var int
      */
-    public $indent = 3;
+    public $indent = 4;
 
 
     /**

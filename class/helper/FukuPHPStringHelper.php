@@ -31,20 +31,21 @@
 class FukuPHPStringHelper
 {
 
-   /**
-    * Method static studly convert a value to studly caps case.
-    *
-    * @param  string  $value
-    * @return string
-    */
-   public static function studly($value)
-   {
-         
-      $value = ucwords(str_replace(array('-', '_'), ' ', $value));
+    /**
+     * Method static studly convert a value to studly caps case.
+     *
+     * @param string $value # input string
+     *
+     * @return string
+     */
+    public static function studly($value)
+    {
+     
+        $value = ucwords(str_replace(array('-', '_'), ' ', $value));
 
-      return str_replace(' ', '', $value);
-   
-   }// end function studly
+        return str_replace(' ', '', $value);
+
+    }// end function studly
 
 }// end class FukuPHPStringHelper
 ?>

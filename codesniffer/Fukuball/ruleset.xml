@@ -9,10 +9,10 @@
  <rule ref="Generic.PHP.DisallowShortOpenTag"/>
  <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
 
- <!-- Lines can be 100 chars long, but never show errors -->
+ <!-- Lines can be 85 chars long, but never show errors -->
  <rule ref="Generic.Files.LineLength">
   <properties>
-   <property name="lineLimit" value="100"/>
+   <property name="lineLimit" value="120"/>
    <property name="absoluteLineLimit" value="0"/>
   </properties>
  </rule>
@@ -35,11 +35,5 @@
    <property name="error" value="false"/>
   </properties>
  </rule>
-
- <rule ref="Generic.WhiteSpace.ScopeIndent">
-   <properties>
-      <property name="indent" value="3"/>
-   </properties>
-</rule>
 
 </ruleset>

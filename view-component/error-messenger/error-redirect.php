@@ -14,5 +14,5 @@
 
 ?>
 <script>
-   window.location = "<?php echo $error_redirect_url; ?>";
+    window.location = "<?php echo $error_redirect_url; ?>";
 </script>

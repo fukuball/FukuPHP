@@ -33,7 +33,7 @@ class Fukuball_Sniffs_Functions_FunctionCallSignatureSniff implements PHP_CodeSn
      *
      * @var int
      */
-    public $indent = 3;
+    public $indent = 4;
 
     /**
      * If TRUE, multiple arguments can be defined per line in a multi-line call.

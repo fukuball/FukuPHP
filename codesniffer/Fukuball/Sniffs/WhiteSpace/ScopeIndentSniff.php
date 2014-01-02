@@ -43,13 +43,6 @@ class Fukuball_Sniffs_WhiteSpace_ScopeIndentSniff extends Generic_Sniffs_WhiteSp
      */
     protected $nonIndentingScopes = array(T_SWITCH);
 
-    /**
-     * The number of spaces code should be indented.
-     *
-     * @var int
-     */
-    public $indent = 3;
-
 }//end class
 
 ?>

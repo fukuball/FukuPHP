@@ -2,124 +2,124 @@
 class FukuPHPActiveRecordTest extends PHPUnit_Framework_TestCase
 {
 
-   public function testConstruct()
-   {
+    public function testConstruct()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
-   public function testDestruct()
-   {
+    public function testDestruct()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
-   public function testGetter()
-   {
+    public function testGetter()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
-   public function testSetter()
-   {
+    public function testSetter()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
-   public function testSetDBAccess()
-   {
+    public function testSetDBAccess()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
-   public function testGetDBAccess()
-   {
+    public function testGetDBAccess()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
-   public function testSetMemcacheAccess()
-   {
+    public function testSetMemcacheAccess()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
-   public function testGetMemcacheAccess()
-   {
+    public function testGetMemcacheAccess()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
-   public function testDeleteMyMemcache()
-   {
+    public function testDeleteMyMemcache()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
-   public function testGetTableName()
-   {
+    public function testGetTableName()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
-   public function testGetId()
-   {
+    public function testGetId()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
-   public function testGetIsDeleted()
-   {
+    public function testGetIsDeleted()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
-   public function testToJSON()
-   {
+    public function testToJSON()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
-   public function testUpdate()
-   {
+    public function testUpdate()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
-   public function testSave()
-   {
+    public function testSave()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
-   public function testDestroy()
-   {
+    public function testDestroy()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
-   public function testRecover()
-   {
+    public function testRecover()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
 }
 ?>

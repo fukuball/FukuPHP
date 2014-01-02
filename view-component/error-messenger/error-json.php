@@ -15,25 +15,24 @@
 header('Content-type: application/json');
 
 $json_data = array (
-   "response"=>
-   array(
-      "status"=>
-         array(
-            "version"=>$version,
-            "code"=>$error_code,
-            "error_type"=>$error_type,
-            "message"=>$message,
-            "parameter"=>$parameter,
-         )
-   )
+    "response"=>
+    array(
+        "status"=>
+            array(
+                "version"=>$version,
+                "code"=>$error_code,
+                "error_type"=>$error_type,
+                "message"=>$message,
+                "parameter"=>$parameter,
+            )
+    )
 );
 
 if (!empty($return_data)) {
-   foreach ($return_data as $key=>$value) {
-      $json_data['response'][$key] = $value;
-   }
+    foreach ($return_data as $key=>$value) {
+        $json_data['response'][$key] = $value;
+    }
 }
-
 
 echo json_encode($json_data);
 ?>

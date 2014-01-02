@@ -124,11 +124,11 @@ class Fukuball_Sniffs_NamingConventions_ValidFunctionNameSniff extends PHP_CodeS
         $scopeSpecified = $methodProps['scope_specified'];
 
         // If it's a private method, it must have an underscore on the front.
-        /*if ($isPublic === false && $methodName{0} !== '_') {
+        if ($isPublic === false && $methodName{0} !== '_') {
             $error = 'Private method name "%s" must be prefixed with an underscore';
             $phpcsFile->addError($error, $stackPtr, 'PrivateNoUnderscore', $errorData);
             return;
-        }*/
+        }
 
         // If it's not a private method, it must not have an underscore on the front.
         if ($isPublic === true && $scopeSpecified === true && $methodName{0} === '_') {
@@ -151,7 +151,7 @@ class Fukuball_Sniffs_NamingConventions_ValidFunctionNameSniff extends PHP_CodeS
             $testMethodName = substr($methodName, 1);
         }
 
-        /*if (PHP_CodeSniffer::isCamelCaps($testMethodName, false, $isPublic, false) === false) {
+        if (PHP_CodeSniffer::isCamelCaps($testMethodName, false, $isPublic, false) === false) {
             if ($scopeSpecified === true) {
                 $error = '%s method name "%s" is not in camel caps format';
                 $data  = array(
@@ -165,7 +165,7 @@ class Fukuball_Sniffs_NamingConventions_ValidFunctionNameSniff extends PHP_CodeS
             }
 
             return;
-        }*/
+        }
 
     }//end processTokenWithinScope()
 

@@ -2,68 +2,68 @@
 class FukuPHPActiveRecordGodTest extends PHPUnit_Framework_TestCase
 {
 
-   public function testConstruct()
-   {
+    public function testConstruct()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
-   public function testDestruct()
-   {
+    public function testDestruct()
+    { 
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
-   public function testSetDBAccess()
-   {
+    public function testSetDBAccess()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
-   public function testGetDBAccess()
-   {
+    public function testGetDBAccess()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
-   public function testIsExist()
-   {
+    public function testIsExist()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
-   public function testGetMaxId()
-   {
+    public function testGetMaxId()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
-   public function testDeleteListCache()
-   {
+    public function testDeleteListCache()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
-   public function testCreate()
-   {
+    public function testCreate()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
-   public function testCreateWithTime()
-   {
+    public function testCreateWithTime()
+    {
 
-      $this->assertEquals(true, true);
+        $this->assertEquals(true, true);
 
-   }
+    }
 
 }
 ?>

@@ -3,63 +3,63 @@
 allow from all
 
 <FilesMatch "\.(ico|pdf|flv|jpg|JPG|jpeg|png|PNG|gif|js|css|swf)(\.gz)?$">
-   <ifModule mod_headers.c>
-      Header set Expires "Thu, 1 Apr 2014 20:00:00 GMT"
-      Header unset ETag
-   </IfModule>
-   FileETag None
+    <ifModule mod_headers.c>
+        Header set Expires "Thu, 1 Apr 2014 20:00:00 GMT"
+        Header unset ETag
+    </IfModule>
+    FileETag None
 </FilesMatch>
 
 # 1 year cache
 <filesMatch "\.(ico|pdf|flv)$">
-   <ifModule mod_headers.c>
-      Header set Cache-Control "max-age=29030400, public"
-   </IfModule>
+    <ifModule mod_headers.c>
+        Header set Cache-Control "max-age=29030400, public"
+    </IfModule>
 </filesMatch>
 # 1 week cache
 <filesMatch "\.(jpg|JPG|jpeg|png|PNG|gif|swf)$">
-   <ifModule mod_headers.c>
-      Header set Cache-Control "max-age=604800, public"
-   </IfModule>
+    <ifModule mod_headers.c>
+        Header set Cache-Control "max-age=604800, public"
+    </IfModule>
 </filesMatch>
 # 2 days cache
 <filesMatch "\.(xml|txt|css|js)$">
-   <ifModule mod_headers.c>
-      Header set Cache-Control "max-age=172800, proxy-revalidate"
-   </IfModule>
+    <ifModule mod_headers.c>
+        Header set Cache-Control "max-age=172800, proxy-revalidate"
+    </IfModule>
 </filesMatch>
 
 <FilesMatch "\.(engine|inc|info|install|make|module|profile|test|po|sh|.*sql|theme|bak|.*sql~|bak~|php~|tpl(\.php)?|xtmpl)$|^(\..*|Entries.*|Repository|Root|Tag|Template)$">
-   Order allow,deny
+    Order allow,deny
 </FilesMatch>
 
 <Files ~ "^\.(htaccess|htpasswd)$">
-   deny from all
+    deny from all
 </Files>
 
 <IfModule mod_rewrite.c>
-   Options +FollowSymlinks
-   RewriteEngine On
-   RewriteBase /
+    Options +FollowSymlinks
+    RewriteEngine On
+    RewriteBase /
 
-   ErrorDocument 403 /error/forbidden
-   ErrorDocument 404 /error/page-not-found
-   ErrorDocument 301 /error/moved-permanently
+    ErrorDocument 403 /error/forbidden
+    ErrorDocument 404 /error/page-not-found
+    ErrorDocument 301 /error/moved-permanently
 
-   RedirectMatch permanent ^/asset/.*$ /error/page-not-found
-   RedirectMatch permanent ^/build/.*$ /error/page-not-found
-   RedirectMatch permanent ^/class/.*$ /error/page-not-found
-   RedirectMatch permanent ^/codesniffer/.*$ /error/page-not-found
-   RedirectMatch permanent ^/config/.*$ /error/page-not-found
-   RedirectMatch permanent ^/migration/.*$ /error/page-not-found
-   RedirectMatch permanent ^/test/.*$ /error/page-not-found
-   RedirectMatch permanent ^/vendor/.*$ /error/page-not-found
-   RedirectMatch permanent ^/view-component/.*$ /error/page-not-found
-   RedirectMatch permanent ^/view-controller/.*$ /error/page-not-found
-   RedirectMatch permanent ^/view-layout/.*$ /error/page-not-found
-   RedirectMatch permanent ^/view-page/.*$ /error/page-not-found
+    RedirectMatch permanent ^/asset/.*$ /error/page-not-found
+    RedirectMatch permanent ^/build/.*$ /error/page-not-found
+    RedirectMatch permanent ^/class/.*$ /error/page-not-found
+    RedirectMatch permanent ^/codesniffer/.*$ /error/page-not-found
+    RedirectMatch permanent ^/config/.*$ /error/page-not-found
+    RedirectMatch permanent ^/migration/.*$ /error/page-not-found
+    RedirectMatch permanent ^/test/.*$ /error/page-not-found
+    RedirectMatch permanent ^/vendor/.*$ /error/page-not-found
+    RedirectMatch permanent ^/view-component/.*$ /error/page-not-found
+    RedirectMatch permanent ^/view-controller/.*$ /error/page-not-found
+    RedirectMatch permanent ^/view-layout/.*$ /error/page-not-found
+    RedirectMatch permanent ^/view-page/.*$ /error/page-not-found
 
-   RewriteCond %{REQUEST_FILENAME} !-f
-   RewriteCond %{REQUEST_FILENAME} !-d
-   RewriteRule ^(.*)$ index.php/$1 [QSA,NC,L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php/$1 [QSA,NC,L]
 </IfModule>

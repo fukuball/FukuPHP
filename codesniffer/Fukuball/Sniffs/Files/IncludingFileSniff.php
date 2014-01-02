@@ -14,7 +14,7 @@
  */
 
 /**
- * Fukublal_Sniffs_Files_IncludingFileSniff.
+ * Fukuball_Sniffs_Files_IncludingFileSniff.
  *
  * Checks that the include_once is used in conditional situations, and
  * require_once is used elsewhere. Also checks that brackets do not surround

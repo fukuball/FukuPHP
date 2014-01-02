@@ -33,7 +33,7 @@ class Fukuball_Sniffs_Formatting_MultiLineAssignmentSniff implements PHP_CodeSni
      *
      * @var int
      */
-    public $indent = 3;
+    public $indent = 4;
 
 
     /**

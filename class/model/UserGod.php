@@ -30,50 +30,52 @@
  */
 class UserGod extends FukuPHPActiveRecordGod
 {
-   // extends from IndievoxActiveRecord
-   //
-   // protected $db_obj;
-   // protected $table_name;
-
-   /**
-    * Method getUserId get user id
-    *
-    * @param string $input # user path or email value
-    * @param string $type  # search type
-    *
-    * @return int $user_id
-    */
-   public function getUserId($input, $type='path')
-   {
-
-      $user_id = 0;
-
-      switch ($type) {
-
-      case 'path':
-         $select_sql = "SELECT ".
-                       "id ".
-                       "FROM user ".
-                       "WHERE $type = :value ".
-                       "AND is_deleted = 0 ".
-                       "LIMIT 1";
-         $param = array(
-            ":value"=>$input
-         );
-
-         $query_result = $this->db_obj->selectCommandPrepare($select_sql, $param);
-
-         foreach ($query_result as $query_result_data) {
-            $user_id = $query_result_data['id'];
-         }
-
-         break;
-
-      }
-
-      return $user_id;
-
-   }// end function getUserId
+    // extends from IndievoxActiveRecord
+    //
+    // protected $db_obj;
+    // protected $table_name;
+ 
+    /**
+     * Method getUserId get user id
+     *
+     * @param string $input # user path or email value
+     * @param string $type  # search type
+     *
+     * @return int $user_id
+     */
+    public function getUserId($input, $type='path')
+    {
+ 
+        $user_id = 0;
+ 
+        switch ($type) {
+ 
+        case 'path':
+ 
+            $select_sql = "SELECT ".
+                          "id ".
+                          "FROM user ".
+                          "WHERE $type = :value ".
+                          "AND is_deleted = 0 ".
+                          "LIMIT 1";
+            
+            $param = array(
+                ":value"=>$input
+            );
+ 
+            $query_result = $this->db_obj->selectCommandPrepare($select_sql, $param);
+ 
+            foreach ($query_result as $query_result_data) {
+                $user_id = $query_result_data['id'];
+            }
+ 
+            break;
+ 
+        }
+ 
+        return $user_id;
+ 
+    }// end function getUserId
 
 }// end class UserGod
 ?>

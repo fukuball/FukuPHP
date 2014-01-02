@@ -33,7 +33,7 @@ class Fukuball_Sniffs_ControlStructures_MultiLineConditionSniff implements PHP_C
      *
      * @var int
      */
-    public $indent = 3;
+    public $indent = 4;
 
 
     /**

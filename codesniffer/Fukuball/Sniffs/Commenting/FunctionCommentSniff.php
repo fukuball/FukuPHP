@@ -404,7 +404,7 @@ class Fukuball_Sniffs_Commenting_FunctionCommentSniff implements PHP_CodeSniffer
                         $realName = '&'.$realName;
                     }
 
-                    if ($realName !== $paramName) {
+                    /*if ($realName !== $paramName) {
                         $code = 'ParamNameNoMatch';
                         $data = array(
                                  $paramName,
@@ -421,7 +421,7 @@ class Fukuball_Sniffs_Commenting_FunctionCommentSniff implements PHP_CodeSniffer
                         $error .= 'actual variable name %s at position %s';
 
                         $this->currentFile->addError($error, $errorPos, $code, $data);
-                    }
+                    }*/
                 } else {
                     // We must have an extra parameter comment.
                     $error = 'Superfluous doc comment at position '.$pos;

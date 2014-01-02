@@ -30,19 +30,19 @@
  */
 class User extends FukuPHPActiveRecord
 {
-   // extends from FukuPHPActiveRecord
-   //
-   // protected $db_obj;
-   // protected $memcache_obj;
-   // protected $use_cache;
-   // protected $table_name;
-   // protected $id;
-   // protected $is_deleted;
-   // protected $create_time;
-   // protected $modify_time;
-   // protected $delete_time;
-   // protected $modify_unix_time;
-   protected $path;
+    // extends from FukuPHPActiveRecord
+    //
+    // protected $db_obj;
+    // protected $memcache_obj;
+    // protected $use_cache;
+    // protected $table_name;
+    // protected $id;
+    // protected $is_deleted;
+    // protected $create_time;
+    // protected $modify_time;
+    // protected $delete_time;
+    // protected $modify_unix_time;
+    protected $path;
 
 }// end class User
 ?>
