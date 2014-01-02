@@ -36,38 +36,42 @@ interface FukuPHPRESTfulInterface
     /**
      * Dispatch get actions
      *
-     * @param array $segments Method segments indicate action and resource
+     * @param array  $segments    # segments indicate action and resource
+     * @param string $request_url # request url
      *
      * @return void
      */
-    public function restGet($segments);
+    public function restGet($segments, $request_url);
     
     /**
      * Dispatch put actions
      *
-     * @param array $segments Method segments indicate action and resource
+     * @param array  $segments    # segments indicate action and resource
+     * @param string $request_url # request url
      *
      * @return void
      */
-    public function restPut($segments);
+    public function restPut($segments, $request_url);
     
     /**
      * Dispatch post actions
      *
-     * @param array $segments Method segments indicate action and resource
+     * @param array  $segments    # segments indicate action and resource
+     * @param string $request_url # request url
      *
      * @return void
      */
-    public function restPost($segments);
+    public function restPost($segments, $request_url);
     
     /**
      * Dispatch delete actions
      *
-     * @param array $segments Method segments indicate action and resource
+     * @param array  $segments    # segments indicate action and resource
+     * @param string $request_url # request url
      *
      * @return void
      */
-    public function restDelete($segments);
+    public function restDelete($segments, $request_url);
     
 }// end interface FukuPHPRESTfulInterface
 ?>

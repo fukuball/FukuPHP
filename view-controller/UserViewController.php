@@ -34,20 +34,13 @@ class UserViewController
     /**
      * Dispatch post actions
      *
-     * @param array $segments Method segments indicate action and resource
+     * @param array  $segments    # segments indicate action and resource
+     * @param string $request_url # request url
      *
      * @return void
      */
-    public function restPost($segments)
+    public function restPost($segments, $request_url='/')
     {
- 
-        $request_url = '/';
- 
-        if ( isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] != '/' ) {
- 
-            $request_url = $_SERVER['PATH_INFO'];
- 
-        }
  
         $url_matches_param = array();
  
@@ -64,20 +57,13 @@ class UserViewController
     /**
      * Dispatch get actions
      *
-     * @param array $segments Method segments indicate action and resource
+     * @param array  $segments    # segments indicate action and resource
+     * @param string $request_url # request url
      *
      * @return void
      */
-    public function restGet($segments)
+    public function restGet($segments, $request_url='/')
     {
- 
-        $request_url = '/';
- 
-        if ( isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] != '/' ) {
- 
-            $request_url = $_SERVER['PATH_INFO'];
- 
-        }
  
         $url_matches_param = array();
  
@@ -127,23 +113,16 @@ class UserViewController
     /**
      * Dispatch put actions
      *
-     * @param array $segments Method segments indicate action and resource
+     * @param array  $segments    # segments indicate action and resource
+     * @param string $request_url # request url
      *
      * @return void
      */
-    public function restPut($segments)
+    public function restPut($segments, $request_url='/')
     {
  
         $_PUT = array();
         parse_str(file_get_contents('php://input'), $_PUT);
- 
-        $request_url = '/';
- 
-        if ( isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] != '/' ) {
- 
-            $request_url = $_SERVER['PATH_INFO'];
- 
-        }
  
         $url_matches_param = array();
  
@@ -161,23 +140,16 @@ class UserViewController
     /**
      * Dispatch delete actions
      *
-     * @param array $segments Method segments indicate action and resource
+     * @param array  $segments    # segments indicate action and resource
+     * @param string $request_url # request url
      *
      * @return void
      */
-    public function restDelete($segments)
+    public function restDelete($segments, $request_url='/')
     {
  
         $_DELETE = array();
         parse_str(file_get_contents('php://input'), $_DELETE);
- 
-        $request_url = '/';
- 
-        if ( isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] != '/' ) {
- 
-            $request_url = $_SERVER['PATH_INFO'];
- 
-        }
  
         $url_matches_param = array();
  
