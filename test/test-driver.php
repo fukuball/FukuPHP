@@ -12,7 +12,7 @@
  * @link     http://www.indievox.com
  */
 
-require_once dirname(dirname(__FILE__))."/config/app-setter.php";
+require_once dirname(dirname(__FILE__))."/config/test-app-setter.php";
 
 function loader($class) {
     $file = $class . '.php';

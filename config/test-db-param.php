@@ -1,6 +1,6 @@
 <?php
 /**
- * db-param.php define db access constant
+ * test-db-param.php define db access constant
  *
  * PHP version 5
  *
@@ -14,22 +14,22 @@
 
 $database_server = array(
     "master"=>array(
-        "db_host"=>'fukuball-db1.cm4k6347dhx2.us-west-2.rds.amazonaws.com',
+        "db_host"=>'localhost',
         "db_name"=>'fukuphp',
-        "db_user"=>'fukuphp',
-        "db_password"=>'pass2fuku'
+        "db_user"=>'root',
+        "db_password"=>''
     ),
     "slave1"=>array(
-        "db_host"=>'fukuball-db1.cm4k6347dhx2.us-west-2.rds.amazonaws.com',
+        "db_host"=>'localhost',
         "db_name"=>'fukuphp',
-        "db_user"=>'fukuphp',
-        "db_password"=>'pass2fuku'
+        "db_user"=>'root',
+        "db_password"=>''
     ),
     "slave2"=>array(
-        "db_host"=>'fukuball-db1.cm4k6347dhx2.us-west-2.rds.amazonaws.com',
+        "db_host"=>'localhost',
         "db_name"=>'fukuphp',
-        "db_user"=>'fukuphp',
-        "db_password"=>'pass2fuku',
+        "db_user"=>'root',
+        "db_password"=>'',
     )
 );
 
