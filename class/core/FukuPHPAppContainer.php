@@ -1,6 +1,6 @@
 <?php
 /**
- * AppContainer.php is the controller of whole app
+ * FukuPHPAppContainer.php is the controller of whole app
  *
  * @category PHP
  * @package  /class/core/
@@ -9,14 +9,14 @@
  * @version  Release: <0.0.1>
  * @link     http://www.fukuball.com
  */
-class AppContainer extends FukuPHPRESTControl
+class FukuPHPAppContainer extends FukuPHPRESTControl
 {
 
    private $_controller = false;
    private $_segments = false;
 
    /**
-    * AppContainer construct
+    * FukuPHPAppContainer construct
     *
     * @return void
     */
@@ -90,7 +90,7 @@ class AppContainer extends FukuPHPRESTControl
    }// end function __construct()
 
    /**
-    * Run AppContainer to get the resource
+    * Run FukuPHPAppContainer to get the resource
     *
     * @return void
     */
@@ -112,5 +112,5 @@ class AppContainer extends FukuPHPRESTControl
 
    }// end function run
 
-}// end class AppContainer
+}// end class FukuPHPAppContainer
 ?>

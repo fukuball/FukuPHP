@@ -14,6 +14,6 @@
 
 require_once dirname(__FILE__)."/config/app-setter.php";
 
-$app_container = new AppContainer();
+$app_container = new FukuPHPAppContainer();
 $app_container->run();
 ?>

@@ -26,7 +26,6 @@
         <whitelist>
             <directory>./class</directory>
             <directory>./view-controller</directory>
-            <file>./index.php</file>
             <exclude>
                 <directory>./asset</directory>
                 <directory>./build</directory>
@@ -41,6 +40,7 @@
                 <directory>./view-layout</directory>
                 <directory>./view-page</directory>
                 <file>./class/FukuPHP.inc</file>
+                <file>./index.php</file>
             </exclude>
         </whitelist>
     </filter>
