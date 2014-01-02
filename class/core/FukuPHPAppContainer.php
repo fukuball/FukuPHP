@@ -121,7 +121,7 @@ class FukuPHPAppContainer extends FukuPHPRESTControl
         }
  
         $arguments = $this->_segments;
-        $this->_controller->$method($arguments);
+        $this->_controller->$method($arguments, $_SERVER['PATH_INFO']);
  
     }// end function run
  
