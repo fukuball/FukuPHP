@@ -46,7 +46,7 @@ class FukuPHPRESTControl
         $error_messenger = new FukuPHPErrorMessenger($type, $parameter);
         $error_messenger->printErrorJSON();
         unset($error_messenger);
-        exit;c
+        exit;
  
     }// end function pageNotFound
 
