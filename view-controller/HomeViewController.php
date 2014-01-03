@@ -47,7 +47,7 @@ class HomeViewController
         switch ($request_url) {
  
         default:
-            //self::pageNotFound();
+            self::pageNotFound();
             break;
  
         }// end switch ($action_level_one_id)
