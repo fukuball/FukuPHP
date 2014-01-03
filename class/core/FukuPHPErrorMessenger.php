@@ -200,39 +200,6 @@ class FukuPHPErrorMessenger
     }// end function printErrorRedirect
  
     /**
-     * Method printErrorBox print error box
-     *
-     * @return void
-     */
-    public function printErrorBox()
-    {
- 
-        $error_title = $this->readable_title;
-        $error_description = $this->readable_description;
-        $error_type = $this->type;
-        $error_parameter = $this->parameter;
-
-        include SITE_ROOT.'/view-component/error-messenger/error-box.php';
- 
-    }// end function printErrorBox
- 
-    /**
-     * Method printErrorLightBox print error light box
-     *
-     * @return void
-     */
-    public function printErrorLightBox()
-    {
- 
-        $error_title = $this->readable_title;
-        $error_description = $this->readable_description;
-        $error_type = $this->type;
-
-        include SITE_ROOT.'/view-component/error-messenger/error-light-box.php';
- 
-    }// end function printErrorLightBox
- 
-    /**
      * Method printErrorJSON print error json
      *
      * @return void
