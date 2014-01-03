@@ -12,7 +12,7 @@
  * @link     http://www.fukuball.com
  */
 
-//header('Content-type: application/json');
+/*header('Content-type: application/json');
 
 $json_data = array (
     "response"=>
@@ -34,6 +34,5 @@ if (!empty($return_data)) {
     }
 }
 
-echo "404";
-//echo json_encode($json_data);
+echo json_encode($json_data);*/
 ?>
