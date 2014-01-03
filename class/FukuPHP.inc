@@ -11,6 +11,7 @@
  * @version  GIT: <0.0.1>
  * @link     http://www.fukuball.com
  */
+//
 
 // core
 function core_loader($class_name) {
