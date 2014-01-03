@@ -573,7 +573,7 @@ class FukuPHPDBAccess
  
         $query_result = $this->db_connection->query($select_sql);
  
-        if (!$query_result) {;
+        if (!$query_result) {
             echo "<h2>".get_class($this)."</h2>";
             //echo "<p>".$select_sql."</p>";
             echo "<pre>";
