@@ -12,7 +12,7 @@
  * @link     http://www.fukuball.com
  */
 
-header('Content-type: application/json');
+//header('Content-type: application/json');
 
 $json_data = array (
     "response"=>
