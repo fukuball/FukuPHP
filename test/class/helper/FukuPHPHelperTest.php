@@ -22,7 +22,7 @@ class FukuPHPHelperTest extends PHPUnit_Framework_TestCase
             "paragraph"=>"獨立音樂需要大家一起來推廣，歡迎加入我們的行列！"
         );
 
-        $response = FukuPHPHelper::testDoPost($post_url, $param);
+        $response = FukuPHPHelper::doPost($post_url, $param);
 
         $thread_page_dom = new DomDocument();
         @$thread_page_dom->loadHTML($response);

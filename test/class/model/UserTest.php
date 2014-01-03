@@ -27,14 +27,29 @@ class UserTest extends PHPUnit_Framework_TestCase
 
     }
 
-    public function testUser()
+    public function testConstruct()
     {
 
         $user_obj = new User(1);
         $this->assertEquals('fukuball', $user_obj->path);
         unset($user_obj);
 
+        $user_obj = new User(1);
+        $this->assertEquals('fukuball', $user_obj->path);
+        unset($user_obj);
+
     }
+
+    public function testDestruct()
+    {
+
+        $user_obj = new User(1);
+        unset($user_obj);
+        $user_obj = '';
+        $this->assertEquals(false, is_a($user_obj, 'User'));
+
+    }
+
 
 }
 ?>
