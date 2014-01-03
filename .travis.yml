@@ -27,7 +27,7 @@ before_script:
 
 # omitting "script:" will default to phpunit
 script:
-  - vendor/bin/phpunit --stderr --configuration phpunit.xml --colors --coverage-text --coverage-clover build/logs/clover.xml
+  - vendor/bin/phpunit --configuration phpunit.xml --colors --coverage-text --coverage-clover build/logs/clover.xml
   - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php --ignore=*/test/* ./class
   - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php --ignore=*/test/* ./view-controller
 
