@@ -26,19 +26,15 @@ before_script:
   - mkdir -p build/logs
 
 # omitting "script:" will default to phpunit
-# use the $DB env variable to determine the phpunit.xml to use
 script:
   - vendor/bin/phpunit --configuration phpunit.xml --colors --coverage-text --coverage-clover build/logs/clover.xml
-  - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php ./class
-  - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php ./view-controller
-  #- vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php --ignore=*/test/* ./index.php
+  - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php --ignore=*/test/* ./class
+  - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php --ignore=*/test/* ./view-controller
 
 # configure notifications (email, IRC, campfire etc)
 #notifications:
   #irc: "irc.freenode.org#travis"
 
 after_script:
-  #- php vendor/bin/coveralls
-  # or enable logging
-  - vendor/bin/coveralls -v
+  - vendor/bin/coveralls -c ./.coveralls.yml -v
   #- vendor/bin/coveralls -c test/coveralls.yml -v  
