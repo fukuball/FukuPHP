@@ -48,7 +48,7 @@ class FukuPHPErrorMessenger
      *
      * @return void
      */
-    public function __construct($type,$parameter)
+    public function __construct($type, $parameter)
     {
  
         try {
