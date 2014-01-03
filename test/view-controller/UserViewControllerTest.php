@@ -49,6 +49,12 @@ class UserViewControllerTest extends PHPUnit_Framework_TestCase
         $output_decode = json_decode($output_content, true);
         $this->assertEquals('404', $output_decode['response']['status']['code']);
 
+        ob_start();
+        $view_controller->restGet(array(), '/fukuball');
+        $output_content = ob_get_contents();
+        ob_end_clean();
+        $this->assertEquals('This is user fukuball', $output_content);
+
     }
 
     public function testRestPut()

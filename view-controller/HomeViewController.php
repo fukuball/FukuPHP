@@ -151,7 +151,7 @@ class HomeViewController
  
         $page_title = 'Home Index Page';
         $yield_path = '/view-page/index.php';
-        include_once SITE_ROOT.'/view-layout/default-layout.php';
+        include SITE_ROOT.'/view-layout/default-layout.php';
  
     }// end function indexAction
 

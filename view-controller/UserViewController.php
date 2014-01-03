@@ -177,14 +177,14 @@ class UserViewController
         if (isset($url_matches_param['user_id'])) {
             $user_id = $url_matches_param['user_id'];
             $user_obj = new User($user_id);
-            echo "This is user ".$user_obj->path.'<br/>';
+            echo "This is user ".$user_obj->path;
             unset($user_obj);  
         } else {
             $user_god_obj = new UserGod();
             $path = $url_matches_param['path'];
             $page_owner_id = $user_god_obj->getUserId($path, 'path');
             $user_obj = new User($page_owner_id);
-            echo "This is user ".$user_obj->path.'<br/>';
+            echo "This is user ".$user_obj->path;
             unset($user_obj);  
             unset($user_god_obj);  
         }
