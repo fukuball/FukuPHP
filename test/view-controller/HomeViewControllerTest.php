@@ -7,7 +7,7 @@ class HomeViewControllerTest extends PHPUnit_Framework_TestCase
 
         $home_view_controller = new HomeViewController();
         ob_start();
-        $home_view_controller->restPost(array(), '/');
+        $home_view_controller->restPost(array(), '/page_not_found');
         $output_content = ob_get_contents();
         ob_end_clean();
         $output_decode = json_decode($output_content, true);
@@ -18,21 +18,39 @@ class HomeViewControllerTest extends PHPUnit_Framework_TestCase
     public function testRestGet()
     {
 
-        $this->assertEquals(true, true);
+        $home_view_controller = new HomeViewController();
+        ob_start();
+        $home_view_controller->restGet(array(), '/page_not_found');
+        $output_content = ob_get_contents();
+        ob_end_clean();
+        $output_decode = json_decode($output_content, true);
+        $this->assertEquals('404', $output_decode['response']['status']['code']);
 
     }
 
     public function testRestPut()
     {
 
-        $this->assertEquals(true, true);
+        $home_view_controller = new HomeViewController();
+        ob_start();
+        $home_view_controller->restPut(array(), '/page_not_found');
+        $output_content = ob_get_contents();
+        ob_end_clean();
+        $output_decode = json_decode($output_content, true);
+        $this->assertEquals('404', $output_decode['response']['status']['code']);
 
     }
 
     public function testRestDelete()
     {
 
-        $this->assertEquals(true, true);
+        $home_view_controller = new HomeViewController();
+        ob_start();
+        $home_view_controller->restDelete(array(), '/page_not_found');
+        $output_content = ob_get_contents();
+        ob_end_clean();
+        $output_decode = json_decode($output_content, true);
+        $this->assertEquals('404', $output_decode['response']['status']['code']);
 
     }
 
