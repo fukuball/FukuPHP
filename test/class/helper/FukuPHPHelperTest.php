@@ -28,7 +28,7 @@ class FukuPHPHelperTest extends PHPUnit_Framework_TestCase
         @$thread_page_dom->loadHTML($response);
         $pre_tags = $thread_page_dom->getElementsByTagName('pre');
         $pre_content = $pre_tags->item(0)->nodeValue;
-        print_r($pre_content);
+        $this->assertNotNull($pre_content);
 
     }
 
