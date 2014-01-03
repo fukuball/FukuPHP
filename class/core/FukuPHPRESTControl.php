@@ -30,7 +30,7 @@
  * @version  Release: <0.0.1>
  * @link     http://www.fukuball.com
  */
-class FukuPHPRESTControl
+abstract class FukuPHPRESTControl
 {
 
     /**
