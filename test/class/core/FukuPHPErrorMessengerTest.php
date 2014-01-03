@@ -5,11 +5,16 @@ class FukuPHPErrorMessengerTest extends PHPUnit_Framework_TestCase
     public function testConstruct()
     {
 
+        ob_start();
         $type = 'page_not_found';
         $parameter = array("none"=>"none");
         $error_messenger = new FukuPHPErrorMessenger($type, $parameter);
-        $this->assertEquals('page_not_found', $error_messenger->type);
+        $error_messenger->printErrorJSON();
         unset($error_messenger);
+        $output_content = ob_get_contents();
+        ob_end_clean();
+        $output_decode = json_decode($output_content, true);
+        $this->assertEquals('404', $output_decode['response']['status']['code']);
 
         try {
  
