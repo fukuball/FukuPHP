@@ -39,7 +39,7 @@ class HomeViewController
      *
      * @return void
      */
-    public function restPost($segments, $request_url='/')
+    public function restPost($segments=array(), $request_url='/')
     {
  
         $url_matches_param = array();
@@ -62,7 +62,7 @@ class HomeViewController
      *
      * @return void
      */
-    public function restGet($segments, $request_url='/')
+    public function restGet($segments=array(), $request_url='/')
     {
  
         $url_matches_param = array();
@@ -93,7 +93,7 @@ class HomeViewController
      *
      * @return void
      */
-    public function restPut($segments, $request_url='/')
+    public function restPut($segments=array(), $request_url='/')
     {
  
         $_PUT = array();
@@ -120,7 +120,7 @@ class HomeViewController
      *
      * @return void
      */
-    public function restDelete($segments, $request_url='/')
+    public function restDelete($segments=array(), $request_url='/')
     {
  
         $_DELETE = array();
@@ -146,7 +146,7 @@ class HomeViewController
      *
      * @return void
      */
-    public static function getIndexAction($url_matches_param, $GET)
+    public static function getIndexAction($url_matches_param=array(), $GET=array())
     {
  
         $page_title = 'Home Index Page';
