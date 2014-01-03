@@ -220,8 +220,11 @@ class FukuPHPDBAccess
         } catch (PDOException $e) {
  
             echo "<h2>".get_class($this)."</h2>";
+            echo "<pre>";
             var_dump($e->getMessage());
-            exit;
+            echo "</pre>";
+            echo "<br>";
+            throw new RuntimeException();
  
         } // end try
  
@@ -286,8 +289,11 @@ class FukuPHPDBAccess
             } catch (PDOException $e) {
  
                 echo "<h2>".get_class($this)."</h2>";
+                echo "<pre>";
                 var_dump($e->getMessage());
-                exit;
+                echo "</pre>";
+                echo "<br>";
+                throw new RuntimeException();
  
             } // end try
  
@@ -452,8 +458,6 @@ class FukuPHPDBAccess
             var_dump($this->db_connection->errorInfo());
             return false;
  
-            exit;
- 
         } else {
  
             return true;
@@ -494,8 +498,11 @@ class FukuPHPDBAccess
         if (!$query_result) {
             echo "<h2>".get_class($this)."</h2>";
             //echo "<p>".$select_sql."</p>";
+            echo "<pre>";
             var_dump($this->db_connection->errorInfo());
-            exit;
+            echo "</pre>";
+            echo "<br>";
+            throw new RuntimeException();
         }
  
         $insert_id = $this->db_connection->lastInsertId();
@@ -534,10 +541,13 @@ class FukuPHPDBAccess
  
         if (!$query_result) {
             echo "<h2>".get_class($this)."</h2>";
-            echo "<p>".$insert_sql."</p>";
-            print_r($param);
-            print_r($this->db_connection->errorInfo());
-            exit;
+            //echo "<p>".$insert_sql."</p>";
+            echo "<pre>";
+            var_dump($param);
+            var_dump($this->db_connection->errorInfo());
+            echo "</pre>";
+            echo "<br>";
+            throw new RuntimeException();
         }
  
         $insert_id = $this->db_connection->lastInsertId();
@@ -563,11 +573,14 @@ class FukuPHPDBAccess
  
         $query_result = $this->db_connection->query($select_sql);
  
-        if (!$query_result) {
+        if (!$query_result) {;
             echo "<h2>".get_class($this)."</h2>";
             //echo "<p>".$select_sql."</p>";
+            echo "<pre>";
             var_dump($this->db_connection->errorInfo());
-            exit;
+            echo "</pre>";
+            echo "<br>";
+            throw new RuntimeException();
         }
  
         if ($this->context_status=='one_time') {
@@ -601,8 +614,11 @@ class FukuPHPDBAccess
         if (!$query_result) {
             echo "<h2>".get_class($this)."</h2>";
             //echo "<p>".$select_sql."</p>";
+            echo "<pre>";
             var_dump($this->db_connection->errorInfo());
-            exit;
+            echo "</pre>";
+            echo "<br>";
+            throw new RuntimeException();
         }
  
         $fetch_query_result = $statement->fetchAll();
@@ -634,8 +650,11 @@ class FukuPHPDBAccess
         if (!$query_result) {
             echo "<h2>".get_class($this)."</h2>";
             //echo "<p>".$update_sql."</p>";
+            echo "<pre>";
             var_dump($this->db_connection->errorInfo());
-            exit;
+            echo "</pre>";
+            echo "<br>";
+            throw new RuntimeException();
         }
  
         if ($this->context_status=='one_time') {
@@ -671,8 +690,11 @@ class FukuPHPDBAccess
         if (!$query_result) {
             echo "<h2>".get_class($this)."</h2>";
             //echo "<p>".$update_sql."</p>";
+            echo "<pre>";
             var_dump($this->db_connection->errorInfo());
-            exit;
+            echo "</pre>";
+            echo "<br>";
+            throw new RuntimeException();
         }
  
         if ($this->context_status=='one_time') {
@@ -702,8 +724,11 @@ class FukuPHPDBAccess
         if (!$query_result) {
             echo "<h2>".get_class($this)."</h2>";
             //echo "<p>".$delete_sql."</p>";
+            echo "<pre>";
             var_dump($this->db_connection->errorInfo());
-            exit;
+            echo "</pre>";
+            echo "<br>";
+            throw new RuntimeException();
         }
  
         if ($this->context_status=='one_time') {
@@ -739,8 +764,11 @@ class FukuPHPDBAccess
         if (!$query_result) {
             echo "<h2>".get_class($this)."</h2>";
             //echo "<p>".$delete_sql."</p>";
+            echo "<pre>";
             var_dump($this->db_connection->errorInfo());
-            exit;
+            echo "</pre>";
+            echo "<br>";
+            throw new RuntimeException();
         }
  
         if ($this->context_status=='one_time') {

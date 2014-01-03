@@ -60,8 +60,11 @@ abstract class FukuPHPActiveRecord
             }
         } catch (Exception $e) {
             echo "<h2>".get_class($this)."</h2>";
+            echo "<pre>";
             var_dump($e->getMessage());
-            exit;
+            echo "</pre>";
+            echo "<br>";
+            throw new RuntimeException();
         }// end try
 
         $this->id = $id;
@@ -108,7 +111,8 @@ abstract class FukuPHPActiveRecord
             if (count($query_instance)==0) {
                 echo "<h2>".get_class($this)."</h2>";
                 echo "id: ".$this->id." not exist.";
-                exit;
+                echo "<br>";
+                throw new RuntimeException();
             }
 
             foreach ($query_instance as $query_instance_data) {
