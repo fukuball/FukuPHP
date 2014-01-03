@@ -11,6 +11,7 @@ class UserViewControllerTest extends PHPUnit_Framework_TestCase
         $param = array();
         $query_instance = $db_obj->insertCommandPrepare($create_user_table_sql, $param);
         $insert_id = $db_obj->insertCommandPrepare($insert_user_sql, $param);
+        unset($db_obj);
 
     }
 
@@ -22,6 +23,7 @@ class UserViewControllerTest extends PHPUnit_Framework_TestCase
         $db_obj = FukuPHPDBAccess::getInstance();
         $param = array();
         $query_instance = $db_obj->deleteCommandPrepare($drop_user_table_sql, $param);
+        unset($db_obj);
 
     }
 
@@ -35,6 +37,7 @@ class UserViewControllerTest extends PHPUnit_Framework_TestCase
         ob_end_clean();
         $output_decode = json_decode($output_content, true);
         $this->assertEquals('404', $output_decode['response']['status']['code']);
+        unset($view_controller);
 
     }
 
@@ -54,6 +57,7 @@ class UserViewControllerTest extends PHPUnit_Framework_TestCase
         $output_content = ob_get_contents();
         ob_end_clean();
         $this->assertEquals('This is user fukuball', $output_content);
+        unset($view_controller);
 
     }
 
@@ -67,6 +71,7 @@ class UserViewControllerTest extends PHPUnit_Framework_TestCase
         ob_end_clean();
         $output_decode = json_decode($output_content, true);
         $this->assertEquals('404', $output_decode['response']['status']['code']);
+        unset($view_controller);
 
     }
 
@@ -80,6 +85,7 @@ class UserViewControllerTest extends PHPUnit_Framework_TestCase
         ob_end_clean();
         $output_decode = json_decode($output_content, true);
         $this->assertEquals('404', $output_decode['response']['status']['code']);
+        unset($view_controller);
 
     }
 

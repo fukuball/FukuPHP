@@ -12,6 +12,7 @@ class HomeViewControllerTest extends PHPUnit_Framework_TestCase
         ob_end_clean();
         $output_decode = json_decode($output_content, true);
         $this->assertEquals('404', $output_decode['response']['status']['code']);
+        unset($view_controller);
 
     }
 
@@ -35,6 +36,7 @@ class HomeViewControllerTest extends PHPUnit_Framework_TestCase
         $title_tags = $thread_page_dom->getElementsByTagName('title');
         $title = $title_tags->item(0)->nodeValue;
         $this->assertEquals('Home Index Page', $title);
+        unset($view_controller);
 
     }
 
@@ -48,6 +50,7 @@ class HomeViewControllerTest extends PHPUnit_Framework_TestCase
         ob_end_clean();
         $output_decode = json_decode($output_content, true);
         $this->assertEquals('404', $output_decode['response']['status']['code']);
+        unset($view_controller);
 
     }
 
@@ -61,6 +64,7 @@ class HomeViewControllerTest extends PHPUnit_Framework_TestCase
         ob_end_clean();
         $output_decode = json_decode($output_content, true);
         $this->assertEquals('404', $output_decode['response']['status']['code']);
+        unset($view_controller);
 
     }
 
