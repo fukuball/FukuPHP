@@ -34,5 +34,6 @@ if (!empty($return_data)) {
     }
 }
 
-echo json_encode($json_data);
+echo "404";
+//echo json_encode($json_data);
 ?>
