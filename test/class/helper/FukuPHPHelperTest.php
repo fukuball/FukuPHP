@@ -14,5 +14,23 @@ class FukuPHPHelperTest extends PHPUnit_Framework_TestCase
 
     }
 
+    public function testDoPost()
+    {
+
+        $post_url = "http://www.fukuball.com/ckip-client/ckip-process";
+        $param = array(
+            "paragraph"=>"獨立音樂需要大家一起來推廣，歡迎加入我們的行列！"
+        );
+
+        $response = FukuPHPHelper::testDoPost($post_url, $param);
+
+        $thread_page_dom = new DomDocument();
+        @$thread_page_dom->loadHTML($response);
+        $pre_tags = $thread_page_dom->getElementsByTagName('pre');
+        $pre_content = $pre_tags->item(0)->nodeValue;
+        print_r($pre_content);
+
+    }
+
 }
 ?>
