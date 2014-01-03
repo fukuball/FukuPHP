@@ -44,7 +44,7 @@ class HomeViewControllerTest extends PHPUnit_Framework_TestCase
 
         $view_controller = new HomeViewController();
         ob_start();
-        $view_controller->restPut(array(), '/');
+        $view_controller->restPut(array(), '/page_not_found');
         $output_content = ob_get_contents();
         ob_end_clean();
         $output_decode = json_decode($output_content, true);
