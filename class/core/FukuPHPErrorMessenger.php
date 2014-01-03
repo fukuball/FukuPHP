@@ -58,7 +58,10 @@ class FukuPHPErrorMessenger
         } catch (Exception $e) {
  
             echo "<h2>".get_class($this)."</h2>";
+            echo "<pre>";
             var_dump($e->getMessage());
+            echo "</pre>";
+            echo "<br>";
             throw new RuntimeException();
  
         }// end try
