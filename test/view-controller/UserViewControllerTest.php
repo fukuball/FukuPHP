@@ -6,13 +6,12 @@ class UserViewControllerTest extends PHPUnit_Framework_TestCase
     {
 
         include SITE_ROOT."/migration/schema.php";
-        echo $create_user_table_sql;
 
         $db_obj = FukuPHPDBAccess::getInstance();
-        //$param = array();
-        //$query_instance = $db_obj->insertCommandPrepare($create_user_table_sql, $param);
-        //$insert_id = $db_obj->insertCommandPrepare($insert_user_sql, $param);
-        //echo $insert_id;
+        $param = array();
+        $query_instance = $db_obj->insertCommandPrepare($create_user_table_sql, $param);
+        $insert_id = $db_obj->insertCommandPrepare($insert_user_sql, $param);
+        echo $insert_id;
 
     }
 

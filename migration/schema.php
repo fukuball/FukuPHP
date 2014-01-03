@@ -28,6 +28,8 @@ $create_user_table_sql = "CREATE TABLE IF NOT EXISTS `user` (".
                             "PRIMARY KEY (`id`)".
                         ") ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;";
 
+$drop_user_table_sql = "DROP TABLE user";
+
 $insert_user_sql = "INSERT INTO `user` (`id`, `path`, `is_deleted`, `create_time`, `modify_time`, `delete_time`) VALUES".
                         "(1, 'fukuball', 0, '2013-12-30 00:00:00', '2013-12-30 16:12:18', '0000-00-00 00:00:00');";
 ?>
