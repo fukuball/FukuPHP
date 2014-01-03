@@ -16,16 +16,15 @@ class FukuPHPErrorMessengerTest extends PHPUnit_Framework_TestCase
         $output_decode = json_decode($output_content, true);
         $this->assertEquals('404', $output_decode['response']['status']['code']);
 
-        $test_exception1 = false;
+        $test_exception = false;
         try { 
             $type = '';
             $parameter = array("none"=>"none");
             $error_messenger = new FukuPHPErrorMessenger($type, $parameter);
         } catch (Exception $e) {
-            $test_exception1 = true;
+            $test_exception = true;
         }
-
-        if (!$test_exception1) {
+        if ($test_exception==false) {
             $this->fail('An expected exception has not been raised.');
         }
 
