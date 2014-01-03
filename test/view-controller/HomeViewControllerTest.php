@@ -72,6 +72,7 @@ class HomeViewControllerTest extends PHPUnit_Framework_TestCase
         HomeViewController::getIndexAction();
         $output_content = ob_get_contents();
         ob_end_clean();
+        echo $output_content;
         $thread_page_dom = new DomDocument();
         @$thread_page_dom->loadHTML($output_content);
         $title_tags = $thread_page_dom->getElementsByTagName('title');
