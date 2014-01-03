@@ -12,9 +12,7 @@
  * @link     http://www.fukuball.com
  */
 
-if (SYSTEM_MODE!='test') {
-    header('Content-type: application/json');
-}
+header('Content-type: application/json');
 
 $json_data = array (
     "response"=>
