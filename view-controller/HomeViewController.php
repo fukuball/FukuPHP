@@ -74,6 +74,10 @@ class HomeViewController
         case '/index':
         case '/':
         case '':
+            echo "test";
+            $type = '';
+            $parameter = array("none"=>"none");
+            $error_messenger = new FukuPHPErrorMessenger($type, $parameter);
             self::getIndexAction($url_matches_param, $_GET);
             break;
  
