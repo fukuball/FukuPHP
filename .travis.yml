@@ -23,8 +23,7 @@ before_script:
   - if [[ "$DB" == "mysql" ]]; then mysql -e "create database IF NOT EXISTS fukuphp;" -uroot; fi
   - composer self-update
   - composer install --dev --prefer-source
-  - installPhpModule -y memcache;
-  - phpenv rehash;
+  - sudo apt-get install php5-memcache
   - mkdir -p build/logs
 
 # omitting "script:" will default to phpunit
