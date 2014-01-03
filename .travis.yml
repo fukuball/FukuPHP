@@ -32,9 +32,9 @@ script:
   - vendor/bin/phpcs --standard=./codesniffer/Fukuball  --extensions=php --ignore=*/test/* ./view-controller
 
 # configure notifications (email, IRC, campfire etc)
-#notifications:
-  #irc: "irc.freenode.org#travis"
+notifications:
+  email:
+    - fukuball@gmail.com
 
 after_script:
   - vendor/bin/coveralls -c ./.coveralls.yml -v
-  #- vendor/bin/coveralls -c test/coveralls.yml -v  
