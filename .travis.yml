@@ -21,9 +21,10 @@ services:
 # execute any number of scripts before the test run, custom env's are available as variables
 before_script:
   - if [[ "$DB" == "mysql" ]]; then mysql -e "create database IF NOT EXISTS fukuphp;" -uroot; fi
+  - echo 'y' | pecl install memcache > ~/memcache.log || ( echo "=== MEMCACHE BUILD FAILED ==="; cat ~/memcache.log )
+  - echo "extension=memcache.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
   - composer self-update
   - composer install --dev --prefer-source
-  - sudo apt-get install php5-memcache
   - mkdir -p build/logs
 
 # omitting "script:" will default to phpunit
