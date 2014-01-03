@@ -86,6 +86,12 @@ class UserViewControllerTest extends PHPUnit_Framework_TestCase
     public function testGetUserAction()
     {
 
+        ob_start();
+        UserViewController::getUserAction(array('user_id'=>'1'), array());
+        $output_content = ob_get_contents();
+        ob_end_clean();
+        $this->assertEquals('This is user fukuball', $output_content);
+
     }
 
 }
