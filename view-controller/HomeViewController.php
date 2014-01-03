@@ -42,7 +42,8 @@ class HomeViewController
     public function restPost($segments=array(), $request_url='/')
     {
  
-        $url_matches_param = array();
+        echo "test";
+        /*$url_matches_param = array();
  
         switch ($request_url) {
  
@@ -50,7 +51,7 @@ class HomeViewController
             self::pageNotFound();
             break;
  
-        }// end switch ($action_level_one_id)
+        }*/// end switch ($action_level_one_id)
  
     }// end function restPost
  
