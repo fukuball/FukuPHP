@@ -5,7 +5,8 @@ class HomeViewControllerTest extends PHPUnit_Framework_TestCase
     public function testRestPost()
     {
 
-        //$home_view_controller = new HomeViewController();
+        $home_view_controller = new HomeViewController();
+        echo "test";
         //ob_start();
         //$home_view_controller->restPost(array(), '/');
         //$output_content = ob_get_contents();
