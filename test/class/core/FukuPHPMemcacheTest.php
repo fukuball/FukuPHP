@@ -14,7 +14,7 @@ class FukuPHPMemcacheTest extends PHPUnit_Framework_TestCase
     {
 
         $memcache_keys = FukuPHPMemcache::getMemcacheKeys('host1');
-        $this->assertEquals(true, is_array ($memcache_keys));
+        $this->assertEquals(true, is_array($memcache_keys));
 
     }
 

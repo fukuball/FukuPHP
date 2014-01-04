@@ -35,7 +35,7 @@ class UserTest extends PHPUnit_Framework_TestCase
         unset($user_obj);
 
         $user_obj = new User(1);
-        $this->assertEquals('1', $user_obj->id);
+        $this->assertEquals('1', $user_obj->getId());
         unset($user_obj);
 
         $test_exception = false;
