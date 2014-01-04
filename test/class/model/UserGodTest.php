@@ -40,7 +40,7 @@ class UserGodTest extends PHPUnit_Framework_TestCase
     public function testDBAccess()
     {
 
-        $user_god_obj = new User();
+        $user_god_obj = new UserGod();
         $user_god_obj->setDBAccess("other_mode");
         $db_obj = $user_god_obj->getDBAccess();
         $this->assertEquals(true, is_a($db_obj, 'FukuPHPDBAccess'));
@@ -51,7 +51,7 @@ class UserGodTest extends PHPUnit_Framework_TestCase
     public function testMaxId()
     {
 
-        $user_god_obj = new User();
+        $user_god_obj = new UserGod();
         $this->assertEquals(1, $user_god_obj->getMaxId());
         unset($user_god_obj);
 
@@ -60,7 +60,7 @@ class UserGodTest extends PHPUnit_Framework_TestCase
     public function testCreate()
     {
 
-        $user_god_obj = new User();
+        $user_god_obj = new UserGod();
         $param = array(
             "path"=>"new-user"
         );
