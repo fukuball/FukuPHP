@@ -102,16 +102,6 @@ class FukuPHPDBAccessTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($user_id, $user_obj->getId());
         unset($user_obj);
 
-        $test_exception = false;
-        try { 
-            $db_obj->selectCommand("Error Query");
-        } catch (Exception $e) {
-            $test_exception = true;
-        }
-        if ($test_exception==false) {
-            $this->fail('An expected exception has not been raised.');
-        }
-
     }
 
     public function testUpdateCommand()
@@ -151,95 +141,6 @@ class FukuPHPDBAccessTest extends PHPUnit_Framework_TestCase
         FukuPHPDBAccess::forceSwitchMaster();
         $affected_rows = $db_obj->deleteCommand($update_user_sql);
         $this->assertEquals(1, $affected_rows);
-
-    }
-
-    public function testException()
-    {
-
-        $db_obj = FukuPHPDBAccess::getInstance();
-
-        $param = array();
-
-        $test_exception = false;
-        try { 
-            $db_obj->selectCommand("Error Query");
-        } catch (Exception $e) {
-            $test_exception = true;
-        }
-        if ($test_exception==false) {
-            $this->fail('An expected exception has not been raised.');
-        }
-
-        $test_exception = false;
-        try { 
-            $db_obj->insertCommand("Error Query");
-        } catch (Exception $e) {
-            $test_exception = true;
-        }
-        if ($test_exception==false) {
-            $this->fail('An expected exception has not been raised.');
-        }
-
-        $test_exception = false;
-        try { 
-            $db_obj->updateCommand("Error Query");
-        } catch (Exception $e) {
-            $test_exception = true;
-        }
-        if ($test_exception==false) {
-            $this->fail('An expected exception has not been raised.');
-        }
-
-        $test_exception = false;
-        try { 
-            $db_obj->deleteCommand("Error Query");
-        } catch (Exception $e) {
-            $test_exception = true;
-        }
-        if ($test_exception==false) {
-            $this->fail('An expected exception has not been raised.');
-        }
-
-        $test_exception = false;
-        try { 
-            $db_obj->selectCommandPrepare("Error Query", $param);
-        } catch (Exception $e) {
-            $test_exception = true;
-        }
-        if ($test_exception==false) {
-            $this->fail('An expected exception has not been raised.');
-        }
-
-        $test_exception = false;
-        try { 
-            $db_obj->insertCommandPrepare("Error Query", $param);
-        } catch (Exception $e) {
-            $test_exception = true;
-        }
-        if ($test_exception==false) {
-            $this->fail('An expected exception has not been raised.');
-        }
-
-        $test_exception = false;
-        try { 
-            $db_obj->updateCommandPrepare("Error Query", $param);
-        } catch (Exception $e) {
-            $test_exception = true;
-        }
-        if ($test_exception==false) {
-            $this->fail('An expected exception has not been raised.');
-        }
-
-        $test_exception = false;
-        try { 
-            $db_obj->deleteCommandPrepare("Error Query", $param);
-        } catch (Exception $e) {
-            $test_exception = true;
-        }
-        if ($test_exception==false) {
-            $this->fail('An expected exception has not been raised.');
-        }
 
     }
 
