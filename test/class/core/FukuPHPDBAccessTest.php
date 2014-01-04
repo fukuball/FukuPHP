@@ -78,7 +78,6 @@ class FukuPHPDBAccessTest extends PHPUnit_Framework_TestCase
         include SITE_ROOT."/migration/schema.php";
 
         $db_obj = FukuPHPDBAccess::getInstance();
-        $param = array();
         $insert_id = $db_obj->insertCommand($insert_user_sql);
         unset($db_obj);
 
@@ -94,9 +93,17 @@ class FukuPHPDBAccessTest extends PHPUnit_Framework_TestCase
         include SITE_ROOT."/migration/schema.php";
 
         $db_obj = FukuPHPDBAccess::getInstance();
-        $param = array();
+        
         $query_result = $db_obj->selectCommand($select_user_sql);
         $result_array = $db_obj->getResultArray($query_result);
+
+        if (empty($result_array)) {
+            $insert_id = $db_obj->insertCommand($insert_user_sql);
+        }
+
+        $query_result = $db_obj->selectCommand($select_user_sql);
+        $result_array = $db_obj->getResultArray($query_result);
+
         print_r($result_array);
 
     }
