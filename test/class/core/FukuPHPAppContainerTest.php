@@ -69,6 +69,17 @@ class FukuPHPAppContainerTest extends PHPUnit_Framework_TestCase
         unset($app_container);
 
         $_SERVER['REQUEST_METHOD'] = 'GET';
+        $_SERVER['PATH_INFO'] = '/user/1';
+
+        ob_start();
+        $app_container = new FukuPHPAppContainer();
+        $app_container->run();
+        $output_content = ob_get_contents();
+        ob_end_clean();
+        $this->assertEquals('This is user fukuball', $output_content);
+        unset($app_container);
+
+        $_SERVER['REQUEST_METHOD'] = 'GET';
         $_SERVER['PATH_INFO'] = '/not-exit';
 
         ob_start();
