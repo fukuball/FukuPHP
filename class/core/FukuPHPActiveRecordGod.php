@@ -210,51 +210,6 @@ abstract class FukuPHPActiveRecordGod
     }// end function create
  
     /**
-     * Method createWithTime create one record in database
-     *
-     * @param array $parameter # the key value array of the instance
-     *
-     * @return int $id
-     */
-    public function createWithTime($parameter)
-    {
- 
-        $now = date('Y-m-d H:i:s');
-        $sql = 'INSERT INTO '.$this->table_name.' ';
-        $key_sql = '(';
-        $value_sql = '(';
-        $param = array();
- 
-        foreach ($parameter as $property_key => $property_value) {
- 
-            switch ($property_key) {
- 
-            default:
- 
-                if (!is_null($property_value)) {
-                    $key_sql = $key_sql.$property_key.', ';
-                    $value_sql = $value_sql.':'.$property_key.', ';
-                    $param[':'.$property_key] = $property_value;
-                }
- 
-                break;
- 
-            }// end switch($property_key)
- 
-        }// end foreach
- 
-        $key_sql = $key_sql.' modify_time)';
-        $value_sql = $value_sql.' :modify_time)';
-        $param[':modify_time'] = $parameter['create_time'];
-        $sql = $sql.$key_sql.' VALUES '.$value_sql;
- 
-        $result = $this->db_obj->insertCommandPrepare($sql, $param);
- 
-        return $result;
- 
-    }// end function createWithTime
- 
-    /**
      * Method __destruct unset commercialgod instance value
      *
      * @return void
