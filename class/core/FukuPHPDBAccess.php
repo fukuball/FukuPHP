@@ -438,6 +438,7 @@ class FukuPHPDBAccess
  
     }// end function getTablelist
  
+    // @codeCoverageIgnoreStart
     /**
      * Method killProcess to kill process
      *
@@ -465,6 +466,7 @@ class FukuPHPDBAccess
         }
  
     }// end function killProcess
+    // @codeCoverageIgnoreEnd
  
     /**
      * Method getResultArray to get result array

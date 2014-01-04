@@ -62,16 +62,6 @@ class FukuPHPDBAccessTest extends PHPUnit_Framework_TestCase
 
     }
 
-    public function testKillProcess()
-    {
-
-        $db_obj = FukuPHPDBAccess::getInstance();
-        $process_list = $db_obj->getProcesslist();
-        $process_id = $process_list[0]['Id'];
-        //$this->assertEquals(true, $db_obj->killProcess($process_id));
-
-    }
-
     public function testInsertCommand()
     {
 
