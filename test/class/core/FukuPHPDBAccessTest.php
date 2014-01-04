@@ -144,5 +144,52 @@ class FukuPHPDBAccessTest extends PHPUnit_Framework_TestCase
 
     }
 
+    public function testException()
+    {
+
+        $db_obj = FukuPHPDBAccess::getInstance();
+
+        $test_exception = false;
+        try { 
+            $db_obj->selectCommand("Error Query");
+        } catch (Exception $e) {
+            $test_exception = true;
+        }
+        if ($test_exception==false) {
+            $this->fail('An expected exception has not been raised.');
+        }
+
+        $test_exception = false;
+        try { 
+            $db_obj->insertCommand("Error Query");
+        } catch (Exception $e) {
+            $test_exception = true;
+        }
+        if ($test_exception==false) {
+            $this->fail('An expected exception has not been raised.');
+        }
+
+        $test_exception = false;
+        try { 
+            $db_obj->updateCommand("Error Query");
+        } catch (Exception $e) {
+            $test_exception = true;
+        }
+        if ($test_exception==false) {
+            $this->fail('An expected exception has not been raised.');
+        }
+
+        $test_exception = false;
+        try { 
+            $db_obj->deleteCommand("Error Query");
+        } catch (Exception $e) {
+            $test_exception = true;
+        }
+        if ($test_exception==false) {
+            $this->fail('An expected exception has not been raised.');
+        }
+
+    }
+
 }
 ?>
