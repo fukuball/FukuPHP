@@ -35,7 +35,7 @@ class UserTest extends PHPUnit_Framework_TestCase
         unset($user_obj);
 
         $user_obj = new User(1);
-        $this->assertEquals('fukuball', $user_obj->path);
+        $this->assertEquals('1', $user_obj->id);
         unset($user_obj);
 
         $test_exception = false;
@@ -68,6 +68,28 @@ class UserTest extends PHPUnit_Framework_TestCase
         $db_obj = $user_obj->getDBAccess();
         $this->assertEquals(true, is_a($db_obj, 'FukuPHPDBAccess'));
         unset($user_obj);
+
+    }
+
+    public function testMemcacheAccess()
+    {
+
+        $user_obj = new User(1);
+        $memcache_obj = $user_obj->getMemcacheAccess();
+        $this->assertEquals(true, is_a($memcache_obj, 'FukuPHPMemcache'));
+        unset($user_obj);
+
+    }
+
+    public function testDeleteMyMemcache()
+    {
+
+        $user_obj = new User(1);
+        unset($user_obj);
+        $user_obj = new User(1);
+        $this->assertEquals(true, $user_obj->deleteMyMemcache());
+        $this->assertEquals(false, $user_obj->deleteMyMemcache());
+        unset($user_obj);        
 
     }
 
