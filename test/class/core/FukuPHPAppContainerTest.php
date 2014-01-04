@@ -2,7 +2,7 @@
 class FukuPHPAppContainerTest extends PHPUnit_Framework_TestCase
 {
 
-    ublic function setUp()
+    public function setUp()
     {
 
         include SITE_ROOT."/migration/schema.php";
