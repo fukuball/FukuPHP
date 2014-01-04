@@ -148,16 +148,6 @@ abstract class FukuPHPActiveRecordGod
     }// end function getMaxId
  
     /**
-     * Static method deleteListCache to delete all list cache
-     *
-     * @return void
-     */
-    public static function deleteListCache()
-    {
- 
-    }// end function deleteListCache
- 
-    /**
      * Method create create one record in database
      *
      * @param array $parameter # the key value array of the instance
