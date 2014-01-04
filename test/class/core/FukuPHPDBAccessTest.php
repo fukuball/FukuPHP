@@ -93,7 +93,7 @@ class FukuPHPDBAccessTest extends PHPUnit_Framework_TestCase
         include SITE_ROOT."/migration/schema.php";
 
         $db_obj = FukuPHPDBAccess::getInstance();
-        
+
         $query_result = $db_obj->selectCommand($select_user_sql);
         $result_array = $db_obj->getResultArray($query_result);
 
@@ -104,7 +104,49 @@ class FukuPHPDBAccessTest extends PHPUnit_Framework_TestCase
         $query_result = $db_obj->selectCommand($select_user_sql);
         $result_array = $db_obj->getResultArray($query_result);
 
-        print_r($result_array);
+        $user_id = $result_array[0]['id'];
+
+        $user_obj = new User($user_id);
+        $this->assertEquals($user_id, $user_obj->getId());
+        unset($user_obj);
+
+    }
+
+    public function testUpdateCommand()
+    {
+
+        include SITE_ROOT."/migration/schema.php";
+
+        $db_obj = FukuPHPDBAccess::getInstance();
+
+        $query_result = $db_obj->selectCommand($select_user_sql);
+        $result_array = $db_obj->getResultArray($query_result);
+
+        if (empty($result_array)) {
+            $insert_id = $db_obj->insertCommand($insert_user_sql);
+        }
+
+        $affected_rows = $db_obj->updateCommand($update_user_sql);
+        $this->assertEquals(1, $affected_rows;
+
+    }
+
+    public function testDeleteCommand()
+    {
+
+        include SITE_ROOT."/migration/schema.php";
+
+        $db_obj = FukuPHPDBAccess::getInstance();
+
+        $query_result = $db_obj->selectCommand($select_user_sql);
+        $result_array = $db_obj->getResultArray($query_result);
+
+        if (empty($result_array)) {
+            $insert_id = $db_obj->insertCommand($insert_user_sql);
+        }
+
+        $affected_rows = $db_obj->deleteCommand($update_user_sql);
+        $this->assertEquals(1, $affected_rows;
 
     }
 
