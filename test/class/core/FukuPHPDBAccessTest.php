@@ -149,6 +149,8 @@ class FukuPHPDBAccessTest extends PHPUnit_Framework_TestCase
 
         $db_obj = FukuPHPDBAccess::getInstance();
 
+        $param = array();
+
         $test_exception = false;
         try { 
             $db_obj->selectCommand("Error Query");
@@ -182,6 +184,46 @@ class FukuPHPDBAccessTest extends PHPUnit_Framework_TestCase
         $test_exception = false;
         try { 
             $db_obj->deleteCommand("Error Query");
+        } catch (Exception $e) {
+            $test_exception = true;
+        }
+        if ($test_exception==false) {
+            $this->fail('An expected exception has not been raised.');
+        }
+
+        $test_exception = false;
+        try { 
+            $db_obj->selectCommandPrepare("Error Query", $param);
+        } catch (Exception $e) {
+            $test_exception = true;
+        }
+        if ($test_exception==false) {
+            $this->fail('An expected exception has not been raised.');
+        }
+
+        $test_exception = false;
+        try { 
+            $db_obj->insertCommandPrepare("Error Query", $param);
+        } catch (Exception $e) {
+            $test_exception = true;
+        }
+        if ($test_exception==false) {
+            $this->fail('An expected exception has not been raised.');
+        }
+
+        $test_exception = false;
+        try { 
+            $db_obj->updateCommandPrepare("Error Query", $param);
+        } catch (Exception $e) {
+            $test_exception = true;
+        }
+        if ($test_exception==false) {
+            $this->fail('An expected exception has not been raised.');
+        }
+
+        $test_exception = false;
+        try { 
+            $db_obj->deleteCommandPrepare("Error Query", $param);
         } catch (Exception $e) {
             $test_exception = true;
         }
