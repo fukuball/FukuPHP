@@ -149,7 +149,26 @@ class UserTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(1, $user_obj->getIsDeleted());
         $user_obj->recover();
         $this->assertEquals(0, $user_obj->getIsDeleted());
+        $user_obj = new User(1);
+        $user_obj->destroy('hard');
         unset($user_obj);
+
+        $test_exception = false;
+        try { 
+            $user_obj = new User(1);
+        } catch (Exception $e) {
+            $test_exception = true;
+        }
+        if ($test_exception==false) {
+            $this->fail('An expected exception has not been raised.');
+        }
+
+        include SITE_ROOT."/migration/schema.php";
+
+        $db_obj = FukuPHPDBAccess::getInstance();
+        $param = array();
+        $insert_id = $db_obj->insertCommandPrepare($insert_user_sql, $param);
+        unset($db_obj);
 
     }
 
