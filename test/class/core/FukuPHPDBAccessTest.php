@@ -67,7 +67,8 @@ class FukuPHPDBAccessTest extends PHPUnit_Framework_TestCase
 
         $db_obj = FukuPHPDBAccess::getInstance();
         $process_list = $db_obj->getProcesslist();
-        print_r($process_list);
+        $process_id = $process_list[0]['Id'];
+        $this->assertEquals(true, $db_obj->killProcess($process_id));
 
     }
 
@@ -94,7 +95,7 @@ class FukuPHPDBAccessTest extends PHPUnit_Framework_TestCase
 
         $db_obj = FukuPHPDBAccess::getInstance();
         $param = array();
-        $query_result = $db_obj->testSelectCommand($select_user_sql);
+        $query_result = $db_obj->selectCommand($select_user_sql);
         $result_array = $db_obj->getResultArray($query_result);
         print_r($result_array);
 
