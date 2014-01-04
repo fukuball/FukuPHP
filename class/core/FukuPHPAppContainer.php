@@ -118,10 +118,12 @@ class FukuPHPAppContainer extends FukuPHPRESTControl
  
             self::pageNotFound();
  
+        } else {
+
+            $arguments = $this->_segments;
+            $this->_controller->$method($arguments, $_SERVER['PATH_INFO']);
+
         }
- 
-        $arguments = $this->_segments;
-        $this->_controller->$method($arguments, $_SERVER['PATH_INFO']);
  
     }// end function run
  
