@@ -66,7 +66,14 @@ class FukuPHPDBAccessTest extends PHPUnit_Framework_TestCase
     {
 
         $db_obj = FukuPHPDBAccess::getInstance();
-        $this->assertEquals(false, $db_obj->killProcess('not_exit'));
+        $test_arr = $db_obj->getProcesslist();
+        while (count($test_arr)>0) {
+            $temp_row = array_shift($test_arr);
+            $this->assertGreaterThanOrEqual(
+                $temp_row['Time'],
+                200
+            );
+        }
 
     }
 
@@ -77,10 +84,10 @@ class FukuPHPDBAccessTest extends PHPUnit_Framework_TestCase
 
         $db_obj = FukuPHPDBAccess::getInstance();
         $param = array();
-        $query_instance = $db_obj->insertCommand($insert_user_sql);
+        $insert_id = $db_obj->insertCommand($insert_user_sql);
         unset($db_obj);
 
-        $user_obj = new User();
+        $user_obj = new User($insert_id);
         $this->assertEquals('1', $user_obj->getId());
         unset($user_obj);
 
