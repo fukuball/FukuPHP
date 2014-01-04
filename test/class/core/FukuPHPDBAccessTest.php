@@ -152,6 +152,8 @@ class FukuPHPDBAccessTest extends PHPUnit_Framework_TestCase
         $affected_rows = $db_obj->deleteCommand($update_user_sql);
         $this->assertEquals(1, $affected_rows);
 
+        $insert_id = $db_obj->insertCommand($insert_user_sql);
+
     }
 
 }
