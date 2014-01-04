@@ -68,5 +68,37 @@ class FukuPHPErrorMessengerTest extends PHPUnit_Framework_TestCase
 
     }
 
+    public function testPrintErrorText()
+    {
+
+        ob_start();
+        $type = 'success';
+        $parameter = array("none"=>"none");
+        $error_messenger = new FukuPHPErrorMessenger($type, $parameter);
+        $error_messenger->printErrorText();
+        unset($error_messenger);
+        $output_content = ob_get_contents();
+        ob_end_clean();
+        $this->assertEquals("成功 - 成功！", $output_content);
+
+    }
+
+    public function testSetReturnData()
+    {
+
+        ob_start();
+        $type = 'success';
+        $parameter = array("none"=>"none");
+        $error_messanger = new FukuPHPErrorMessenger($type, $parameter);
+        $error_messanger->setReturnData('other_data', "other_data");
+        $error_messanger->printErrorJSON();
+        unset($error_messanger);
+        $output_content = ob_get_contents();
+        ob_end_clean();
+        $output_decode = json_decode($output_content, true);
+        $this->assertEquals('other_data', $output_decode['response']['other_data']);
+
+    }
+
 }
 ?>
