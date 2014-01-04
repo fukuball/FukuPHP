@@ -141,6 +141,12 @@ class FukuPHPMemcache
      */
     public static function connectMemcache($host)
     {
+
+        if (SYSTEM_MODE=='test') {
+            include SITE_ROOT."/config/test-memcache-param.php";
+        } else {
+            include SITE_ROOT."/config/memcache-param.php";
+        }
  
         if (   !self::$memcache_server[$host]
             || !isset(self::$memcache_server[$host])
