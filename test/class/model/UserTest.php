@@ -38,6 +38,16 @@ class UserTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('fukuball', $user_obj->path);
         unset($user_obj);
 
+        $test_exception = false;
+        try { 
+            $user_obj = new User(0);
+        } catch (Exception $e) {
+            $test_exception = true;
+        }
+        if ($test_exception==false) {
+            $this->fail('An expected exception has not been raised.');
+        }
+
     }
 
     public function testDestruct()
@@ -47,6 +57,17 @@ class UserTest extends PHPUnit_Framework_TestCase
         unset($user_obj);
         $user_obj = '';
         $this->assertEquals(false, is_a($user_obj, 'User'));
+
+    }
+
+    public function testDBAccess()
+    {
+
+        $user_obj = new User(1);
+        $user_obj->setDBAccess("other_mode");
+        $db_obj = $user_obj->getDBAccess();
+        $this->assertEquals(true, is_a($db_obj, 'FukuPHPDBAccess'));
+        unset($user_obj);
 
     }
 
