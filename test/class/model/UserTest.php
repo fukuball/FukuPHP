@@ -111,15 +111,48 @@ class UserTest extends PHPUnit_Framework_TestCase
 
     }
 
-    public function testToJSON()
+    public function testUpdate()
     {
 
         $user_obj = new User(1);
-        $user_json = $user_obj->toJSON();
-        print_r($user_json);
+        $param = array(
+            "path" => "fukuball-lin"
+        );
+        $user_obj->update($param);
+        $this->assertEquals('fukuball-lin', $user_obj->path);
+        $param = array(
+            "path" => "fukuball"
+        );
+        $user_obj->update($param);
         unset($user_obj);
 
     }
+
+    public function testSave()
+    {
+
+        $user_obj = new User(1);
+        $user_obj->path = 'fukuball-lin';
+        $user_obj->save();
+        $this->assertEquals('fukuball-lin', $user_obj->path);
+        $user_obj->path = 'fukuball';
+        $user_obj->save();
+        unset($user_obj);
+
+    }
+
+    public function testDestroyNRecover()
+    {
+
+        $user_obj = new User(1);
+        $user_obj->destroy();
+        $this->assertEquals(1, $user_obj->getIsDeleted());
+        $user_obj->recover();
+        $this->assertEquals(0, $user_obj->getIsDeleted());
+        unset($user_obj);
+
+    }
+
 
 
 }

@@ -356,18 +356,6 @@ abstract class FukuPHPActiveRecord
     }// end function getIsDeleted
 
     /**
-     * Method toJSON get this instance public data json file
-     *
-     * @return json $json_data
-     */
-    public function toJSON()
-    {
-
-        return json_encode($this);
-
-    }// end function toJSON
-
-    /**
      * Method update to update some instance value
      *
      * @param array $parameter # the key value array of the instance
