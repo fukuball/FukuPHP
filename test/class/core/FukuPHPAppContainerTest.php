@@ -1,5 +1,5 @@
 <?php
-class FukuPHPAppContainerHelperTest extends PHPUnit_Framework_TestCase
+class FukuPHPAppContainerTest extends PHPUnit_Framework_TestCase
 {
 
     public function testRun()
