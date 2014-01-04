@@ -66,14 +66,8 @@ class FukuPHPDBAccessTest extends PHPUnit_Framework_TestCase
     {
 
         $db_obj = FukuPHPDBAccess::getInstance();
-        $test_arr = $db_obj->getProcesslist();
-        while (count($test_arr)>0) {
-            $temp_row = array_shift($test_arr);
-            $this->assertGreaterThanOrEqual(
-                $temp_row['Time'],
-                200
-            );
-        }
+        $process_list = $db_obj->getProcesslist();
+        print_r($process_list);
 
     }
 
@@ -90,6 +84,19 @@ class FukuPHPDBAccessTest extends PHPUnit_Framework_TestCase
         $user_obj = new User($insert_id);
         $this->assertEquals('1', $user_obj->getId());
         unset($user_obj);
+
+    }
+
+    public function testSelectCommand()
+    {
+
+        include SITE_ROOT."/migration/schema.php";
+
+        $db_obj = FukuPHPDBAccess::getInstance();
+        $param = array();
+        $query_result = $db_obj->testSelectCommand($select_user_sql);
+        $result_array = $db_obj->getResultArray($query_result);
+        print_r($result_array);
 
     }
 

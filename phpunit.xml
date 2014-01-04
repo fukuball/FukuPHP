@@ -40,6 +40,7 @@
                 <directory>./view-layout</directory>
                 <directory>./view-page</directory>
                 <file>./class/FukuPHP.inc</file>
+                <file>./class/core/FukuPHPRESTfulInterface.php</file>
                 <file>./index.php</file>
             </exclude>
         </whitelist>

@@ -779,16 +779,6 @@ class FukuPHPDBAccess
         return $statement->rowCount();
  
     }// end function deleteCommandPrepare
- 
-    /**
-     * Method __destruct unset instance value
-     *
-     * @return void
-     */
-    public function __destruct()
-    {
- 
-    }// end function __destruct
 
 }// end class FukuPHPDBAccess
 

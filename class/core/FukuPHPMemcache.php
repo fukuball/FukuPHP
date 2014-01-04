@@ -218,16 +218,6 @@ class FukuPHPMemcache
         return $list;
  
     }// end function getMemcacheKeys
- 
-    /**
-     * Method __destruct unset instance value
-     *
-     * @return void
-     */
-    public function __destruct()
-    {
- 
-    }// end function __destruct
 
 }// end class FukuPHPMemcache
 
