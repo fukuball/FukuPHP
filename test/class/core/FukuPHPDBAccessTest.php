@@ -78,6 +78,7 @@ class FukuPHPDBAccessTest extends PHPUnit_Framework_TestCase
         include SITE_ROOT."/migration/schema.php";
 
         $db_obj = FukuPHPDBAccess::getInstance();
+        FukuPHPDBAccess::forceSwitchMaster();
         $insert_id = $db_obj->insertCommand($insert_user_sql);
         unset($db_obj);
 
@@ -93,7 +94,7 @@ class FukuPHPDBAccessTest extends PHPUnit_Framework_TestCase
         include SITE_ROOT."/migration/schema.php";
 
         $db_obj = FukuPHPDBAccess::getInstance();
-
+        FukuPHPDBAccess::forceSwitchMaster();
         $query_result = $db_obj->selectCommand($select_user_sql);
         $result_array = $db_obj->getResultArray($query_result);
 
@@ -101,6 +102,7 @@ class FukuPHPDBAccessTest extends PHPUnit_Framework_TestCase
             $insert_id = $db_obj->insertCommand($insert_user_sql);
         }
 
+        FukuPHPDBAccess::forceSwitchMaster();
         $query_result = $db_obj->selectCommand($select_user_sql);
         $result_array = $db_obj->getResultArray($query_result);
 
@@ -126,8 +128,9 @@ class FukuPHPDBAccessTest extends PHPUnit_Framework_TestCase
             $insert_id = $db_obj->insertCommand($insert_user_sql);
         }
 
+        FukuPHPDBAccess::forceSwitchMaster();
         $affected_rows = $db_obj->updateCommand($update_user_sql);
-        $this->assertEquals(1, $affected_rows;
+        $this->assertEquals(1, $affected_rows);
 
     }
 
@@ -145,8 +148,9 @@ class FukuPHPDBAccessTest extends PHPUnit_Framework_TestCase
             $insert_id = $db_obj->insertCommand($insert_user_sql);
         }
 
+        FukuPHPDBAccess::forceSwitchMaster();
         $affected_rows = $db_obj->deleteCommand($update_user_sql);
-        $this->assertEquals(1, $affected_rows;
+        $this->assertEquals(1, $affected_rows);
 
     }
 
