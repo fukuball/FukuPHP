@@ -76,7 +76,7 @@ class UserTest extends PHPUnit_Framework_TestCase
 
         $user_obj = new User(1);
         $memcache_obj = $user_obj->getMemcacheAccess();
-        $this->assertEquals(true, is_a($memcache_obj, 'FukuPHPMemcache'));
+        $this->assertEquals(true, is_a($memcache_obj, 'Memcache'));
         unset($user_obj);
 
     }
@@ -90,6 +90,34 @@ class UserTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(true, $user_obj->deleteMyMemcache());
         $this->assertEquals(false, $user_obj->deleteMyMemcache());
         unset($user_obj);        
+
+    }
+
+    public function testGetTableName()
+    {
+
+        $user_obj = new User(1);
+        $this->assertEquals("user", $user_obj->getTableName());
+        unset($user_obj);
+
+    }
+
+    public function testGetIsDeleted()
+    {
+
+        $user_obj = new User(1);
+        $this->assertEquals(0, $user_obj->getIsDeleted());
+        unset($user_obj);
+
+    }
+
+    public function testToJSON()
+    {
+
+        $user_obj = new User(1);
+        $user_json = $user_obj->toJSON();
+        print_r($user_json);
+        unset($user_obj);
 
     }
 
