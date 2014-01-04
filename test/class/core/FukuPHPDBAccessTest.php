@@ -102,6 +102,16 @@ class FukuPHPDBAccessTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($user_id, $user_obj->getId());
         unset($user_obj);
 
+        $test_exception = false;
+        try { 
+            $db_obj->selectCommand("Error Query");
+        } catch (Exception $e) {
+            $test_exception = true;
+        }
+        if ($test_exception==false) {
+            $this->fail('An expected exception has not been raised.');
+        }
+
     }
 
     public function testUpdateCommand()
