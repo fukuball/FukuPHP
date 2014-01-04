@@ -43,5 +43,30 @@ class FukuPHPErrorMessengerTest extends PHPUnit_Framework_TestCase
 
     }
 
+    public function testPrintErrorRedirect()
+    {
+
+        ob_start();
+        $type = 'unknow_error';
+        $parameter = array("none"=>"none");
+        $error_messenger = new FukuPHPErrorMessenger($type, $parameter);
+        $error_messenger->printErrorRedirect();
+        unset($error_messenger);
+        $output_content = ob_get_contents();
+        ob_end_clean();
+        $this->assertNotNull($output_content);
+
+        ob_start();
+        $type = 'success';
+        $parameter = array("none"=>"none");
+        $error_messenger = new FukuPHPErrorMessenger($type, $parameter);
+        $error_messenger->printErrorRedirect("http://www.google.com");
+        unset($error_messenger);
+        $output_content = ob_get_contents();
+        ob_end_clean();
+        $this->assertNotNull($output_content);
+
+    }
+
 }
 ?>

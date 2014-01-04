@@ -116,43 +116,6 @@ class FukuPHPErrorMessenger
 
             break;
 
-        case 'not_exist_item':
-
-            $this->code = "5";
-            $this->message = $this->type." - Not Exist Item!";
-            $this->readable_title = "此物件不存在";
-            $this->readable_description = "您要求的物件不存在於資料庫，請確認 ID 是否正確。";
-
-            break;
-
-        case 'permission_deny':
-
-            $this->code = "4";
-            $this->message = $this->type." - No Permission to Access!";
-            $this->readable_title = "未經授權";
-            $this->readable_description = "您的請求未經授權，請重新操作，謝謝！";
-
-            break;
-
-        case 'login_fail':
-
-            $this->code = "3";
-            $this->message = $this->type." - Email Or Password Not Match!";
-            $this->readable_title = "登入失敗";
-            $this->readable_description = "您所輸入的帳號不存在或密碼輸入錯誤，".
-                                          "請重新操作，謝謝！";
-
-            break;
-
-        case 'not_exist_value':
-
-            $this->code = "2";
-            $this->message = $this->type." - Not Exist Value!";
-            $this->readable_title = "缺少參數";
-            $this->readable_description = "您的請求缺少某些參數，請重新操作，謝謝！";
-
-            break;
-
         case 'success':
 
             $this->code = "0";
