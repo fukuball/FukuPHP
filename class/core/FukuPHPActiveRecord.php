@@ -737,6 +737,24 @@ abstract class FukuPHPActiveRecord
     }// end function __set
 
     /**
+     * Method __isset to overwrite original isset
+     *
+     * @param string $key # input key
+     *
+     * @return mix $attribute
+     */
+    public function __isset($key)
+    {
+
+        $return_value = null;
+
+        $return_value = isset($this->$key)? $this->$key : null;
+
+        return isset($return_value);
+
+    }// end function __isset
+
+    /**
      * Method __destruct unset instance value
      *
      * @return void
