@@ -14,11 +14,11 @@
 
 $memcache_server = array(
     "host1"=>array(
-        "cache_host"=>'fukuball-cache.j1teqo.cfg.usw2.cache.amazonaws.com',
+        "cache_host"=>'localhost',
         "cache_port"=>'11211'
     ),
     "host2"=>array(
-        "cache_host"=>'fukuball-cache.j1teqo.cfg.usw2.cache.amazonaws.com',
+        "cache_host"=>'localhost',
         "cache_port"=>'11211'
     )
 );
